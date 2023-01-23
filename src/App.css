@@ -2,36 +2,35 @@
 
 /* declare all css variable here */
 :root {
- --yellow-color: #ffb400;
- --green-color: #96bf01;
- --black-color: #252525;
+  --yellow-color: #ffb400;
+  --green-color: #96bf01;
+  --black-color: #252525;
 }
 
 /* reset settings for all browser */
 *,
 *::before,
 *::after {
- box-sizing: border-box;
- margin: 0;
- padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
 html {
- font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
- font-family: Lato, 'Lucida Sans', sans-serif;
- min-width: 32rem;
- font-size: 1.6rem;
- background-color: var(--yellow-color);
+  font-family: Lato, 'Lucida Sans', sans-serif;
+  min-width: 32rem;
+  font-size: 1.6rem;
+  background-color: var(--yellow-color);
 }
 
 .d-flex {
- display: flex;
+  display: flex;
 }
 
 h1 {
- color: white;
+  color: white;
 }
