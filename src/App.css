@@ -5,6 +5,7 @@
   --yellow-color: #ffb400;
   --green-color: #96bf01;
   --black-color: #252525;
+  --gray-color: #e4e5e9;
 }
 
 /* reset settings for all browser */
@@ -24,7 +25,7 @@ body {
   font-family: Lato, 'Lucida Sans', sans-serif;
   min-width: 32rem;
   font-size: 1.6rem;
-  background-color: var(--yellow-color);
+  background-color: var(--gray-color);
 }
 
 .d-flex {
@@ -32,5 +33,5 @@ body {
 }
 
 h1 {
-  color: white;
+  color: var(--yellow-color);
 }
