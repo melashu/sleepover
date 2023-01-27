@@ -8,6 +8,7 @@ const initialState = {
   countryList: [],
   searchKeys: [],
   Loading: false,
+  isAuthenticated: true
 };
 
 export const getuserData = createAsyncThunk(
@@ -28,5 +29,5 @@ const usersSlice = createSlice({
   reducers: {},
   extraReducers: {},
 });
-
+export const isAuthenticatedUser = (state) => state.user.isAuthenticated;
 export default usersSlice.reducer;
