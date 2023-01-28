@@ -6,8 +6,8 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Admin />
-      <RouteAdmin />
+      {/* <Admin />
+      <RouteAdmin /> */}
       <Login />
     </div>
 
