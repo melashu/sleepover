@@ -1,4 +1,4 @@
 .home-picture {
     background-image: url('/src/assets/hotel.jpg');
-    filter: blur(7px);
+    /* filter: blur(7px); */
 }
