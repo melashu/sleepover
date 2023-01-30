@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -9,6 +11,9 @@ module.exports = {
       colors: {
         'black-rgba': 'rgba(0, 0, 0, 0.54)',
       },
+      fontFamily: {
+        'pop': [ 'Poppins', sans-serif ]
+      }
     },
   },
   variants: {
