@@ -1,10 +1,24 @@
-import Login from './Components/login/Login';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import CustomNav from './Components/nav/nav';
+import Signup from './Components/signup/signup';
+import Homepage from './Components/home/home';
 import './App.css';
 
 function App() {
   return (
-    <Login />
-
+    <div className="lk-app-container lk-flex ">
+      <Router>
+        <CustomNav />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
