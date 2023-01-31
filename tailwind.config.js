@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+// eslint-disable-next-line import/no-extraneous-dependencies
 
 module.exports = {
   purge: [],
@@ -12,8 +12,8 @@ module.exports = {
         'black-rgba': 'rgba(0, 0, 0, 0.54)',
       },
       fontFamily: {
-        'pop': [ 'Poppins', sans-serif ]
-      }
+        pop: ['Poppins'],
+      },
     },
   },
   variants: {
