@@ -122,3 +122,62 @@ body {
   justify-content: space-between;
 }
 
+/* signup */
+.lk-signup-container {
+  width: 80%;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  justify-content: center;
+}
+
+.lk-signup-wrapper {
+  height: auto;
+  gap: 0.5rem;
+  width: 50%;
+}
+
+.lk-signUpHeader {
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  font-style: italic;
+  box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+}
+
+.lk-signUpForm {
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  font-style: italic;
+}
+
+.lk-error {
+  color: red;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.lk-input-wrapper {
+  width: 100%;
+}
+
+.lk-input {
+  padding: 0.8rem;
+  width: 100%;
+  background-color: var(--dark-gray-color);
+  color: black;
+  border: none;
+}
+
+.lk-submit-wrapper {
+  align-items: flex-end;
+}
+
+.lk-submit {
+  padding: 0.7rem 2.5rem;
+  border: none;
+  background-color: var(--green-color);
+  color: white;
+  border-radius: 30rem;
+  font-weight: 600;
+}
