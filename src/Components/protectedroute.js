@@ -1,15 +1,17 @@
 import { useSelector } from 'react-redux';
-import { Navigate, useNavigate  } from 'react-router-dom';
-import { isAuthenticatedUser } from '../Redux/users/users';
+import { Navigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { isAuthenticatedAdmin } from '../Redux/users/users';
 
-const ProtectedRoute = ({ childern }) => {
-    const loginstatus = useSelector(isAuthenticatedUser);
-    // const naviage = useNavigate()
+const Protected = ({ children }) => {
+  const loginstatus = useSelector(isAuthenticatedAdmin);
   if (!loginstatus) {
-    return <Navigate to="/" replace/>
+    return <Navigate to="/" replace />;
   }
-    console.log(childern)
-  return childern;
+  return children;
 };
 
-export default ProtectedRoute;
+Protected.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+export default Protected;
