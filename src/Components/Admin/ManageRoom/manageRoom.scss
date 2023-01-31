@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.me-search-input {
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.me-room {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+  border-bottom: 5px solid #1C6EA4;
+  border-radius: 10px;
+  &:hover{
+    background-color: rgb(240, 240, 240);
+  }
+}
