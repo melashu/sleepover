@@ -40,6 +40,20 @@ body {
   /* filter: blur(7px); */
 }
 
+.login-btn {
+  background-color: #049cd8;
+  padding: 1rem 5rem;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #11ace9;
+}
+
+.bg-red {
+  background-color: rgb(240, 0, 0);
+}
+
 /* h1 {
   color: var(--yellow-color);
 } */
