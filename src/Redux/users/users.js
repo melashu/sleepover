@@ -5,10 +5,9 @@ import axios from 'axios';
 const url = '';
 
 const initialState = {
-  countryList: [],
   searchKeys: [],
   Loading: false,
-  isAuthenticated: true
+  isAuthenticated: true,
 };
 
 export const getuserData = createAsyncThunk(
@@ -29,5 +28,5 @@ const usersSlice = createSlice({
   reducers: {},
   extraReducers: {},
 });
-export const isAuthenticatedUser = (state) => state.user.isAuthenticated;
+export const isAuthenticatedAdmin = (state) => state.user.isAuthenticated;
 export default usersSlice.reducer;
