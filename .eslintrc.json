@@ -18,7 +18,12 @@
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "no-return-await": "off",
+    "no-param-reassign": "off",
+    "global-require": "off",
+    "no-unused-vars": "off"
   },
   "ignorePatterns": [
     "dist/",
