@@ -1,0 +1,15 @@
+.ABHoverGreen h1:hover {
+  color: #96bf01;
+}
+
+.ABTitleNav a {
+  text-decoration: none;
+  color: #96bf01;
+}
+
+.ABTitleNav a:hover {
+  border: 1px solid #96bf01;
+  padding: 10px;
+  color: #fff;
+  background-color: #96bf01;
+}

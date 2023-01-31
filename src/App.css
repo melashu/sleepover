@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* declare all css variable here */
 :root {
@@ -23,7 +28,7 @@ html {
 }
 
 body {
-  font-family: Lato, 'Lucida Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   min-width: 32rem;
   font-size: 1.6rem;
   background-color: var(--gray-color);
@@ -181,3 +186,25 @@ body {
   border-radius: 30rem;
   font-weight: 600;
 }
+
+.login-picture {
+  background-image: url('/src/assets/hotel.jpg');
+}
+
+.login-btn {
+  background-color: #049cd8;
+  padding: 1rem 5rem;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #11ace9;
+}
+
+.bg-red {
+  background-color: rgb(240, 0, 0);
+}
+
+/* h1 {
+  color: var(--yellow-color);
+} */
