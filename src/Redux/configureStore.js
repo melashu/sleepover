@@ -6,6 +6,7 @@ import hotelReducer from './hotelSlices';
 import reserveReducer from './reservationSlices';
 import roomReducer from './roomSlices';
 import allreservedReducer from './Admin/reserved';
+import historyreservedReducer from './Admin/historyReserved';
 
 const rootReducer = combineReducers({
   user: userReduce,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   reserve: reserveReducer,
   room: roomReducer,
   allreserved: allreservedReducer,
+  historyreserved: historyreservedReducer,
   // Add your reducers here
 });
 
