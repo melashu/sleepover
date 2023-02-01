@@ -3,13 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 import api from '../module/api';
 
 const initialState = {
+
+  searchKeys: [],
+  Loading: false,
+  isAuthenticated: true,
   responseCode: '',
   errorMessages: { error: [] },
-  Loading: false,
-
-  isAuthenticated: true,
   signupResponseMsg: null,
   currentUser: {},
+
 };
 
 export const userSignUp = api.signup;
@@ -47,7 +49,9 @@ const usersSlice = createSlice({
     }));
   },
 });
-export const isAuthenticatedUser = (state) => state.user.isAuthenticated;
+
+export const authenticated = (state) => state.user.isAuthenticated;
 
 export const { passwordMismatch } = usersSlice.actions;
+
 export default usersSlice.reducer;

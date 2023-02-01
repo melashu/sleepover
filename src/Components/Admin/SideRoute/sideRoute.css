@@ -1,3 +1,9 @@
+.me-side-bar {
+  overflow-y: scroll;
+  flex: 2 !important;
+  padding: 10px;
+}
+
 .ABHoverGreen h1:hover {
   color: #96bf01;
 }
@@ -5,11 +11,25 @@
 .ABTitleNav a {
   text-decoration: none;
   color: #96bf01;
+  font-size: 24px;
 }
 
 .ABTitleNav a:hover {
   border: 1px solid #96bf01;
-  padding: 10px;
+  margin: 5px;
   color: #fff;
   background-color: #96bf01;
+}
+
+.me-admin-contrainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.me-main {
+  flex: 6;
+  padding: 5px;
+  margin: 5px;
+  max-width: 80%;
 }

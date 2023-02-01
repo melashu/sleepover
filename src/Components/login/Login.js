@@ -1,37 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { loginUser } from "../../Redux/authentification/login";
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser } from '../../Redux/authentification/login';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
   const [isSuccess, setSuccess] = useState(false);
   const dispatch = useDispatch();
   const history = useNavigate();
 
   useEffect(() => {
-    setMessage("");
+    setMessage('');
   }, [email, password]);
 
   const handlelLogin = async () => {
     if (email.length === 0 && password.length === 0) {
-      setMessage("Pease Fill all the field to login");
+      setMessage('Pease Fill all the field to login');
     } else if (email.length === 0) {
-      setMessage("Email should not be blank");
+      setMessage('Email should not be blank');
     } else if (password.length === 0) {
-      setMessage("Password should not be blank");
+      setMessage('Password should not be blank');
     } else {
       fetch(
         `http://localhost:3001/auth/login?email=${email}&password=${password}`,
         {
-          method: "post",
+          method: 'post',
           headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
           },
-        }
+        },
       )
         .then((res) => res.json())
         .then((res) => {
@@ -39,7 +39,7 @@ const Login = () => {
             dispatch(loginUser({ email, password }));
             setSuccess(true);
           } else {
-            setMessage("Invalid email or password");
+            setMessage('Invalid email or password');
           }
         });
     }
@@ -48,7 +48,7 @@ const Login = () => {
   return (
     <>
       {isSuccess ? (
-        history("/home")
+        history('/home')
       ) : (
         <div className="backdrop-saturate-25 login-picture w-sreen h-screen bg-cover flex flex-col justify-center items-center p-2 bg-black bg-opacity-50">
           <div className="flex relative flex-col justify-center items-center bg-black bg-opacity-50 p-5 py-20">

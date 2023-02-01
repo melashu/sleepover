@@ -57,7 +57,7 @@ const SignUp = () => {
         history('/login')
       ) : (
         <div className="backdrop-saturate-25 login-picture w-sreen h-screen bg-cover flex flex-col justify-center items-center p-2 bg-black bg-opacity-50">
-          <div className="relative flex flex-col justify-center items-center p-2 bg-black bg-opacity-50 p-5 py-20">
+          <div className="relative flex flex-col justify-center items-center bg-black bg-opacity-50 p-5 py-20">
             <h1 className="text-white-300 text-white mb-5 uppercase">Sign up</h1>
             <div className="login flex flex-col justify-center items-center">
               <input type="text" placeholder="Name" className="p-2 border rounded-lg" onChange={(e) => setName(e.target.value)} />
