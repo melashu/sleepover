@@ -36,7 +36,6 @@ const hotelSlices = createSlice({
     [getHotelThank.fulfilled]: (state, { payload }) => {
       state.loadingStatus = 'success';
       state.hotels = payload;
-      // console.log
     },
     [getHotelThank.pending]: (state) => {
       state.loadingStatus = 'pending';
