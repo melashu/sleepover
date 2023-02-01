@@ -18,4 +18,14 @@ const fetchReducer = (state = initialState, action) => {
   }
 };
 
+export const fetchreserved = () => (dispatch) => {
+  axios.get(Api).then((res) => {
+    const { data } = res;
+    dispatch({
+      type: GET_RESERVED,
+      payload: data,
+    });
+  });
+};
+
 export default fetchReducer;
