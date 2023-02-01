@@ -11,6 +11,7 @@
   --green-color: #96bf01;
   --black-color: #252525;
   --gray-color: #e4e5e9;
+  --dark-gray-color: #e2e3e5;
 }
 
 /* reset settings for all browser */
@@ -33,14 +34,161 @@ body {
   background-color: var(--gray-color);
 }
 
-.d-flex {
+.lk-c-flex,
+.lk-flex {
   display: flex;
+}
+
+.lk-c-flex {
+  flex-direction: column;
+}
+
+/* header / nav */
+.lk-header {
+  background-color: white;
+  color: black;
+  padding-left: 2rem;
+  padding-top: 3rem;
+  width: 20%;
+  height: 100vh;
+  border-right: 1px solid var(--gray-color);
+
+  /* justify-items: space-between; */
+}
+
+.lk-log {
+  margin-bottom: 3rem;
+}
+
+.lk-nav-wrapper {
+  height: 100%;
+  justify-content: space-between;
+  padding-bottom: 10%;
+}
+
+.lk-nav-container {
+  width: 100%;
+
+  /* border: 1px solid blue; */
+  height: 60%;
+  max-height: 85%;
+}
+
+.nav-ul {
+  list-style-type: none;
+  padding: 2% 0;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+
+  /* border: 1px solid red; */
+  justify-content: space-between;
+}
+
+.nav-ul li {
+  /* border: 1px solid green; */
+  width: 100%;
+  height: 100%;
+}
+
+.nav-ul li a {
+  padding-left: 1rem;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.nav-ul li a:hover {
+  background-color: var(--green-color);
+  color: white;
+}
+
+.lk-social {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.lk-social .fa,
+.lk-copy-right p {
+  color: gray;
+  font-size: 1rem;
+}
+
+.lk-social-wrapper {
+  width: 70%;
+  justify-content: space-between;
+}
+
+/* signup */
+.lk-signup-container {
+  width: 80%;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  justify-content: center;
+}
+
+.lk-signup-wrapper {
+  height: auto;
+  gap: 0.5rem;
+  width: 50%;
+}
+
+.lk-signUpHeader {
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  font-style: italic;
+  box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+}
+
+.lk-signUpForm {
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  font-style: italic;
+}
+
+.lk-error {
+  color: red;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.lk-input-wrapper {
+  width: 100%;
+}
+
+.lk-input {
+  padding: 0.8rem;
+  width: 100%;
+  background-color: var(--dark-gray-color);
+  color: black;
+  border: none;
+}
+
+.lk-submit-wrapper {
+  align-items: flex-end;
+}
+
+.lk-submit {
+  padding: 0.7rem 2.5rem;
+  border: none;
+  background-color: var(--green-color);
+  color: white;
+  border-radius: 30rem;
+  font-weight: 600;
 }
 
 .login-picture {
   background-image: url('/src/assets/hotel.jpg');
-
-  /* filter: blur(7px); */
 }
 
 .login-btn {
