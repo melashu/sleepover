@@ -1,0 +1,30 @@
+.carousel-container{
+    background-color: rgb(245, 242, 242);
+}
+a{
+    text-decoration: none;
+}
+.card{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    .h2{
+        text-transform: capitalize !important;
+    }
+}
+
+.me-card-title{
+  text-transform: capitalize;
+  font-style: 32px;
+}
+
+.detail{
+   padding: 10px;
+}
+
+.me-title{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 900;
+}
