@@ -9,7 +9,6 @@ const initialState = {
   isAuthenticated: true,
   responseCode: '',
   errorMessages: { error: [] },
-  Loading: false,
   signupResponseMsg: null,
   currentUser: {},
 

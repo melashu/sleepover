@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { authenticated } from '../Redux/users/users';
 
 const Protected = ({ children }) => {
-  const loginstatus = useSelector(isAuthenticatedAdmin);
+  const loginstatus = useSelector(authenticated);
   if (!loginstatus) {
     return <Navigate to="/" replace />;
   }

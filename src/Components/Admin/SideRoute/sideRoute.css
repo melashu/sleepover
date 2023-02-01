@@ -1,4 +1,4 @@
-.me-side-bar{
+.me-side-bar {
   overflow-y: scroll;
   flex: 2 !important;
   padding: 10px;
@@ -21,13 +21,13 @@
   background-color: #96bf01;
 }
 
-.me-admin-contrainer{
+.me-admin-contrainer {
   display: flex;
   min-height: 100vh;
   width: 100%;
 }
 
-.me-main{
+.me-main {
   flex: 6;
   padding: 5px;
   margin: 5px;

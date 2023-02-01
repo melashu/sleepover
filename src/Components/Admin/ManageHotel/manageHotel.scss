@@ -10,6 +10,7 @@
     font-weight: 600;
     color: teal;
   }
+
   .new-hotel {
     padding: 10px;
     border: 1px teal solid;
@@ -18,6 +19,7 @@
     cursor: pointer;
     font-size: 18px;
     color: teal;
+
     &:hover {
       color: #fff;
       background-color: teal;
@@ -25,7 +27,7 @@
   }
 }
 
-.css-yrdy0g-MuiDataGrid-columnHeaderRow{
+.css-yrdy0g-MuiDataGrid-columnHeaderRow {
   background-color: aqua;
   width: 100%;
 }
