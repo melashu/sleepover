@@ -1,33 +1,53 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 // eslint-disable-next-line
-import axios from 'axios';
-
-const url = '';
+import api from '../module/api';
 
 const initialState = {
-  countryList: [],
-  searchKeys: [],
+  responseCode: '',
+  errorMessages: { error: [] },
   Loading: false,
-  isAuthenticated: true
+
+  isAuthenticated: true,
+  signupResponseMsg: null,
+  currentUser: {},
 };
 
-export const getuserData = createAsyncThunk(
-  'users/userData',
-  async () => {
-    try {
-      const response = await axios.get(`${url}`);
-      return response.data;
-    } catch (error) {
-      return error;
-    }
-  },
-);
+export const userSignUp = api.signup;
 
 const usersSlice = createSlice({
-  name: 'country',
+  name: 'users',
   initialState,
-  reducers: {},
-  extraReducers: {},
+  reducers: {
+    passwordMismatch: (state) => ({
+      ...state,
+      errorMessages: { error: ['password mismatch'] },
+    }),
+
+  },
+  extraReducers: (builder) => {
+    builder.addCase(userSignUp.fulfilled, (state, { payload }) => {
+      if ('id' in payload) {
+        return {
+          ...state,
+          errorMessages: { error: [] },
+          signupResponseMsg: 'Created',
+        };
+      }
+      return {
+        ...state,
+        errorMessages: payload.response.data,
+        signupResponseMsg: null,
+      };
+    });
+
+    builder.addCase(userSignUp.rejected, (state) => ({
+      ...state,
+      errorMessages: { error: ['server error'] },
+      signupResponseMsg: null,
+    }));
+  },
 });
 export const isAuthenticatedUser = (state) => state.user.isAuthenticated;
+
+export const { passwordMismatch } = usersSlice.actions;
 export default usersSlice.reducer;

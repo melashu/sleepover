@@ -1,24 +1,32 @@
 
 
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import CustomNav from './Components/nav/nav';
+import Signup from './Components/signup/signup';
 import Login from './Components/login/Login';
 import Home from './Components/Home/home';
-import ProtectedRoute from './Components/protectedroute';
-import Admin from "./Components/Admin/SideRoute/sideRoute";
 import RouteAdmin from "./Components/Admin/RouteAdmin";
 
 
 function App() {
-  return (
-
-    <div>
-      <Admin />
+  return <div>
       <RouteAdmin />
-      <Login />
+    <div className="lk-app-container lk-flex ">
+      <Router>
+        <CustomNav />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </Router>
     </div>
-
-  );
+  </div>;
 }
 
 export default App;
