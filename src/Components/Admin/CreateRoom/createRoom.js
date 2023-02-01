@@ -41,24 +41,26 @@ const CreateRoom = () => {
         data,
       );
       if (response.data.message === 'success') {
-        setMessage('success');
+        setMessage('Successfuly created!');
         setRoomNo('');
         setNumberofBed('');
         setHotel('');
         setPrices('');
-      } else setMessage(response.data.message);
+      } else setMessage('error');
     } catch (error) {
-      setMessage(error.toString());
+      setMessage('error');
     }
   };
 
   return (
     <div className="p-3">
-      {message === 'success' ? (
+      {message === 'Successfuly created!' ? (
         <div className="alert alert-success">{message}</div>
-      ) : (
-        <div className="alert alert-danger">{message}</div>
-      )}
+      ) : null}
+
+      {message === 'error' ? (
+        <div className="alert alert-danger">Something went wrong!</div>
+      ) : null}
       <form onSubmit={create}>
         <div className="mb-3">
           <label htmlFor="room" className="form-label me-label">
@@ -133,10 +135,7 @@ const CreateRoom = () => {
             className="form-control p-4"
           />
         </div>
-        <button
-          type="submit"
-          className="btn btn-outline-primary btn-lg btn-sm  me-btn-save"
-        >
+        <button type="submit" className="btn btn-outline-primary me-btn-save">
           Save
         </button>
       </form>

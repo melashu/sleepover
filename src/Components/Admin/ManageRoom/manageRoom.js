@@ -19,8 +19,10 @@ const ManageRoom = () => {
     dispatch(createRoomThunk());
   }, []);
   const filteredRoom = rooms.filter((room) => {
-    if (room.hotel.name.toLowerCase().includes(searchTearm)
-      || room.hotel.city.toLowerCase().includes(searchTearm)) {
+    if (
+      room.hotel.name.toLowerCase().includes(searchTearm)
+      || room.hotel.city.toLowerCase().includes(searchTearm)
+    ) {
       return room;
     }
     return null;

@@ -20,7 +20,9 @@ const createHotelThunk = createAsyncThunk('hotel', async (hotel) => {
   return response.data.message;
 });
 
-const initialState = { hotels: [], loadingStatus: 'idel', message: {} };
+const initialState = {
+  hotels: [], unReservedHotels: [], loadingStatus: 'idel', message: {},
+};
 
 const hotelSlices = createSlice({
   name: 'hotel',
@@ -34,18 +36,25 @@ const hotelSlices = createSlice({
     [getHotelThank.fulfilled]: (state, { payload }) => {
       state.loadingStatus = 'success';
       state.hotels = payload;
-      // return payload;
+      // console.log
     },
     [getHotelThank.pending]: (state) => {
       state.loadingStatus = 'pending';
     },
     [getHotelThank.rejected]: (state) => {
       state.loadingStatus = 'rejected';
+      alert('no');
     },
+    // [createUnreservedHotelThunk.fulfilled]: (state, { payload }) => {
+    //   state.unReservedHotels = payload;
+    // },
   },
 });
 
 const getHotel = (state) => state.hotel.hotels;
-export { getHotelThank, getHotel, createHotelThunk };
+const getUnReservedHotel = (state) => state.hotel.unReservedHotels;
+export {
+  getHotelThank, getUnReservedHotel, getHotel, createHotelThunk,
+}; // createUnreservedHotelThunk
 export const { removeHotel } = hotelSlices.actions;
 export default hotelSlices.reducer;

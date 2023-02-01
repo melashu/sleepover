@@ -13,7 +13,6 @@ const ManageHotel = () => {
   useEffect(() => {
     dispatch(getHotelThank());
   }, []);
-
   const deleteHotel = async (id) => {
     const response = await axios.delete(
       `http://127.0.0.1:3000/api/v1/hotels/${id}`,

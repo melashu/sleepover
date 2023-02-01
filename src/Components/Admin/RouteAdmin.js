@@ -10,11 +10,14 @@ import './SideRoute/sideRoute.css';
 import Protected from '../protectedroute';
 import Login from '../login/Login';
 import Dashboard from './Dashboard/dashboard';
+import Hotel from '../Hotel/hotel';
 import Reservedroom from './reservedroom/reservedroom';
 import Navbar from './navbar/navbar';
 import Detail from './detail/detail';
 import Footer from '../Footer/footer';
 import PageNotFound from '../PageNotFound/pagenotfound';
+import Hoteldetail from '../HotelDetail/hoteldetail';
+import RoomDetail from '../RoomDetail/roomdetail';
 
 export default function RouteAdmin() {
   return (
@@ -89,11 +92,17 @@ export default function RouteAdmin() {
             />
             <Route path="/logout" element={<Logout />} />
             <Route path="*" element={<PageNotFound />} />
+            <Route path="/hotel">
+              <Route index element={<Hotel />} />
+              <Route path=":id">
+                <Route index element={<Hoteldetail />} />
+                <Route path="detail" element={<RoomDetail />} />
+              </Route>
+            </Route>
           </Routes>
         </div>
       </div>
       <Footer />
-
     </>
   );
 }
