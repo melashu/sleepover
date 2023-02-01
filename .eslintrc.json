@@ -34,7 +34,11 @@
         "peerDependencies": true
       }
     ],
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "no-return-await": "off",
+    "no-param-reassign": "off",
+    "global-require": "off",
+    "no-unused-vars": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
