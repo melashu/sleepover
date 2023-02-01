@@ -18,6 +18,8 @@ import Footer from '../Footer/footer';
 import PageNotFound from '../PageNotFound/pagenotfound';
 import Hoteldetail from '../HotelDetail/hoteldetail';
 import RoomDetail from '../RoomDetail/roomdetail';
+import AllReservation from './AllReserved/AllReserved';
+import HistoryReservation from './HistoryReserved/HistoryReserved';
 
 export default function RouteAdmin() {
   return (
@@ -86,7 +88,15 @@ export default function RouteAdmin() {
               path="/reserved-room"
               element={(
                 <Protected>
-                  <Reservedroom />
+                  <AllReservation />
+                </Protected>
+              )}
+            />
+            <Route
+              path="/history-reserved-room"
+              element={(
+                <Protected>
+                  <HistoryReservation />
                 </Protected>
               )}
             />
