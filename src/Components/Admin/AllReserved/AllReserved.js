@@ -4,7 +4,7 @@ import { fetchreserved } from '../../../Redux/Admin/reserved';
 import './AllReserved.css';
 
 const AllReserved = () => {
-  const { reserved } = useSelector((state) => state.reserved);
+  const { reserved } = useSelector((state) => state.allreserved);
   const dispatch = useDispatch();
 
   useEffect(() => {

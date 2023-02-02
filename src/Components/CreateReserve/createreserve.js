@@ -4,10 +4,12 @@ import DatePicker from 'react-datepicker';
 import axios from 'axios';
 import 'react-datepicker/dist/react-datepicker.css';
 import './createreserve.scss';
+import { useSelector } from 'react-redux';
 
 /* eslint jsx-a11y/label-has-associated-control: ["error", { assert: "either" } ] */
 
 const CreateReserve = () => {
+  const user = useSelector((state) => state.user);
   const { state } = useLocation();
   const today = new Date();
   const [start, setStart] = useState(today);
@@ -18,7 +20,7 @@ const CreateReserve = () => {
     data.append('start_date', start);
     data.append('end_date', end);
     data.append('room_id', state.id);
-    data.append('user_id', 1);
+    data.append('user_id', user.user.id);
     const response = await axios.post('http://127.0.0.1:3000/api/v1/reservations', data);
     setMessage(response.data.message);
   };
