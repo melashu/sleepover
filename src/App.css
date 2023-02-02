@@ -249,6 +249,36 @@ body {
 /* h1 {
   color: var(--yellow-color);
 } */
+.lk-hotel-container{
+ width: 100%;
+ background-color: white;
+ border: 1px solid red;
+ height: 100vh;
+ justify-content: center;
+ right: 0;
+}
+
+
+.lk-hotel-container h2{
+  font-size: 1.6rem;
+}
+
+
+
+.lk-btn-green{
+  color: white ;
+  background-color: var(--green-color);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+.lk-btn-green:hover{
+ color: white ;
+ background-color: #88ad02;
+ 
+}
+
 
 @media screen and (min-width: 768px) {
   .lk-header {
@@ -259,6 +289,11 @@ body {
 
   .lk-app-container{
      max-width: 100%;
+  }
+
+  .lk-hotel-container{
+    width: 75%;
+    max-width: 75%;
   }
 
   .lk-nav-wrapper {

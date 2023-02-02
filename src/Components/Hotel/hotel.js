@@ -39,7 +39,7 @@ const Hotel = () => {
   };
 
   return (
-    <div>
+    <div className='lk-hotel-container lk-c-flex'>
       <h2 className="me-title">Available Hotels for reservations</h2>
       {hotels.length === 0 ? (
         <div>
@@ -61,11 +61,11 @@ const Hotel = () => {
         focusOnSelect
         centerMode
         containerClass="carousel-container"
-        removeArrowOnDeviceType={['tablet', 'mobile']}
+        // removeArrowOnDeviceType={['tablet', 'mobile']}
         itemClass="carousel-item-padding-40-px"
       >
         {hotels.map((hotel) => (
-          <div className="card" key={hotel.id}>
+          <div className="card lk-flex" key={hotel.id}>
             <img
               src={logo}
               className="card-img-top"
@@ -87,7 +87,7 @@ const Hotel = () => {
                 {' '}
 
               </p>
-              <Link to={`hotel/${hotel.id}`} state={hotel} className="btn btn-primary">
+              <Link to={`hotel/${hotel.id}`} state={hotel} className="btn btn-primary lk-btn-green">
                 See all rooms
               </Link>
             </div>
