@@ -30,16 +30,35 @@ export default function RouteAdmin() {
           <Navbar />
 
           <Routes>
-            <Route
-              path="/admin"
-              element={(
+            <Route path="/"
+              
+            >
+            <Route index element={(
                 <Protected>
                   {' '}
                   <Dashboard />
                 </Protected>
+              )}/>
+
+             <Route
+              path="/reserved-room"
+              element={(
+                <Protected>
+                  <AllReservation />
+                </Protected>
               )}
             />
-            <Route path="/manageHotel">
+            <Route
+              path="/history-reserved-room"
+              element={(
+                <Protected>
+                  <HistoryReservation />
+                </Protected>
+              )}
+            />
+
+
+              <Route path="manage-hotel">
               <Route
                 index
                 element={(
@@ -65,6 +84,8 @@ export default function RouteAdmin() {
                 )}
               />
             </Route>
+            </Route>
+            
             <Route path="/manageRoom">
               <Route
                 index
@@ -82,23 +103,11 @@ export default function RouteAdmin() {
                   </Protected>
                 )}
               />
+
+
+
             </Route>
-            <Route
-              path="/reserved-room"
-              element={(
-                <Protected>
-                  <AllReservation />
-                </Protected>
-              )}
-            />
-            <Route
-              path="/history-reserved-room"
-              element={(
-                <Protected>
-                  <HistoryReservation />
-                </Protected>
-              )}
-            />
+ 
             <Route path="/logout" element={<Logout />} />
             <Route path="*" element={<PageNotFound />} />
             <Route path="/hotel">
