@@ -34,9 +34,9 @@ body {
   background-color: var(--gray-color);
 }
 
-.lk-app-container {
+#root{
   position: relative;
-}
+} 
 
 .lk-c-flex,
 .lk-flex {
@@ -54,7 +54,6 @@ body {
   padding-top: 1rem;
   height: 100vh;
   border-right: 1px solid var(--gray-color);
-
   /* justify-items: space-between; */
   flex-direction: column;
 }
@@ -80,7 +79,7 @@ body {
 
 .nav-mobile {
   position: absolute;
-  display: flex;
+  /* display: flex; */
   z-index: 1000;
   top: 0;
   right: 0;
@@ -256,6 +255,10 @@ body {
     padding-top: 1rem;
     width: 25%;
     display: flex;
+  }
+
+  .lk-app-container{
+     max-width: 100%;
   }
 
   .lk-nav-wrapper {

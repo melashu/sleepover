@@ -4,6 +4,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
 import './hotel.scss';
+import logo from '../../assets/hotel.jpg'
+
+
 
 const Hotel = () => {
   const [hotels, setHotels] = useState([]);
@@ -64,7 +67,7 @@ const Hotel = () => {
         {hotels.map((hotel) => (
           <div className="card" key={hotel.id}>
             <img
-              src={hotel.image.url}
+              src={logo}
               className="card-img-top"
               alt={hotel.name}
             />
