@@ -27,19 +27,19 @@ export default function sideRoute() {
         </li>
         <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
           <HotelIcon style={{ backgroundColor: '#fff' }} />
-          <Link to="/ManageHotel">Manage Hotel</Link>
+          <Link to="/admin/manage-hotel">Manage Hotel</Link>
         </li>
         <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
           <Bed style={{ backgroundColor: '#fff' }} />
-          <Link to="/manageRoom">Manage Room</Link>
+          <Link to="/admin/manageRoom">Manage Room</Link>
         </li>
         <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
           <CircleOutlined style={{ backgroundColor: '#fff' }} />
-          <Link to="/reserved-room">Reservations</Link>
+          <Link to="/admin/reserved-room">Reservations</Link>
         </li>
         <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
           <CircleOutlined style={{ backgroundColor: '#fff' }} />
-          <Link to="/history-reserved-room">History Reservations</Link>
+          <Link to="/admin/history-reserved-room">History Reservations</Link>
         </li>
       </ul>
     </div>
