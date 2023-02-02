@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import { userSignUp, passwordMismatch } from '../../Redux/users/users';
+import { userSignUp } from '../../Redux/users/users';
 
 const SignUpForm = () => {
   const [name, setName] = useState('');
@@ -10,6 +10,7 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [passwordMismatch, setPasswordMismatch] = useState('');
 
   const dispatch = useDispatch();
 
@@ -17,11 +18,27 @@ const SignUpForm = () => {
     (state) => state.user,
   );
 
+     const navigate = useNavigate()
+
+    useEffect(() => {
+    }, [passwordMismatch]);
+
+    useEffect(() => {
+    
+     if(user.signupResponseMsg === 'Created'){
+      navigate('/login');
+     }
+   }, [user]);
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (e.target.password.value !== e.target.confirm_password.value) {
-      dispatch(passwordMismatch());
+      // dispatch(passwordMismatch());
+      setPasswordMismatch('Password mismatch!')
+      
     } else {
+      setPasswordMismatch('')
       dispatch(userSignUp({
         name: e.target.name.value,
         username: e.target.username.value,
@@ -31,13 +48,18 @@ const SignUpForm = () => {
     }
   };
 
+   
+
   return (
     <form onSubmit={handleSubmit} className="lk-signUpForm lk-c-flex">
       <div className="lk-error ">
         <ul className="lk-error-message">
-          { user.errorMessages.errors && user.errorMessages.errors.map((er) => (
+          {<li >{passwordMismatch}</li>}
+          
+          { 
+           user.errorMessages.errors && user.errorMessages.errors.map((er) => (
             <li key={er}>{er}</li>
-          ))}
+          ))  }
 
         </ul>
       </div>
