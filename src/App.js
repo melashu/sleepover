@@ -12,16 +12,16 @@ import RouteConfig from './Components/Admin/RouteAdmin';
 function App() {
   return (
     <div>
-        {/* <RouteConfig /> */}
-        <div className="lk-app-container lk-flex ">
-          {/* <Router> */}
-          <CustomNav />
-          <Routes>
+      {/* <RouteConfig /> */}
+      <div className="lk-app-container lk-flex ">
+        {/* <Router> */}
+        <CustomNav />
+        <Routes>
 
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Routes>
-          {/* </Router> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+        {/* </Router> */}
       </div>
     </div>
   );

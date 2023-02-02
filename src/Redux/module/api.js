@@ -6,7 +6,7 @@ const baseUrl = 'http://127.0.0.1:3001/';
 const headers = {
   'Content-Type': 'application/json',
   Accept: 'application/json',
-  Authorization: localStorage.getItem('token')
+  Authorization: localStorage.getItem('token'),
 };
 
 // const
@@ -32,7 +32,7 @@ const api = {
     },
   ),
   // Login user
-  loginUser : createAsyncThunk(
+  loginUser: createAsyncThunk(
     'loginuser', async (body) => {
       try {
         const res = await fetch(`${baseUrl}auth/login`, {
@@ -42,12 +42,10 @@ const api = {
         });
         return await res.json();
       } catch (error) {
-        return error
+        return error;
       }
-
-  })
-
-
+    },
+  ),
 
 };
 

@@ -17,7 +17,7 @@ const initialState = {
 };
 
 export const userSignUp = api.signup;
-export const loginUser = api.loginUser;
+export const { loginUser } = api;
 
 const usersSlice = createSlice({
   name: 'users',
@@ -66,16 +66,15 @@ const usersSlice = createSlice({
 
     builder.addCase(loginUser.pending, (state) => ({
       ...state,
-      Loading : true
+      Loading: true,
     }));
 
     builder.addCase(loginUser.fulfilled, (state,
-      {payload}
-    ) => {
+      { payload }) => {
       // state.Loading = false;
       if (payload.error === 'unauthorized') {
         // state.error = error;
-        console.log("Error", payload.error);
+        console.log('Error', payload.error);
         return {
           ...state,
           error: payload.error,
@@ -83,40 +82,40 @@ const usersSlice = createSlice({
           msg: '',
           isAuthenticated: false,
           user: '',
-          token: ''
+          token: '',
         };
-      } else {
-        localStorage.setItem('token', payload.token);
-        return {
-          ...state,
-          msg: "Created",
-          Loading: false,
-          user: payload.user,
-          error: '',
-          token: payload.token,
-          isAuthenticated: true
-        };
-        // state.msg = msg;
-        // state.user = user;
-        // state.token = token;
-        // state.error = '';
-        // localStorage.setItem('msg', msg);
-        // localStorage.setItem('user', JSON.stringify(user));
-        // localStorage.setItem('token', token);
       }
+      localStorage.setItem('token', payload.token);
+      return {
+        ...state,
+        msg: 'Created',
+        Loading: false,
+        user: payload.user,
+        error: '',
+        token: payload.token,
+        isAuthenticated: true,
+      };
+      // state.msg = msg;
+      // state.user = user;
+      // state.token = token;
+      // state.error = '';
+      // localStorage.setItem('msg', msg);
+      // localStorage.setItem('user', JSON.stringify(user));
+      // localStorage.setItem('token', token);
     });
 
     builder.addCase(loginUser.rejected, (state) => ({
       ...state,
-      Loading : true
+      Loading: true,
     }));
-
   },
 
 });
 
 export const authenticated = (state) => state.user.isAuthenticated;
 
-export const { passwordMismatch, getData, addToken, addUser, logout  } = usersSlice.actions;
+export const {
+  passwordMismatch, getData, addToken, addUser, logout,
+} = usersSlice.actions;
 
 export default usersSlice.reducer;
