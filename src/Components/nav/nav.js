@@ -1,24 +1,56 @@
-import React from 'react';
+import React,  { useState, useEffect }  from 'react';
 import {
   Link,
 } from 'react-router-dom';
 import {
-  FaTwitter, FaFacebookF, FaGooglePlus, FaVenus, FaPinterestP,
+  FaTwitter, FaFacebookF, FaGooglePlus, FaVenus, 
+  FaPinterestP, FaBars, FaTimes
 } from 'react-icons/fa';
+import image from  '../../assets/log.jpg'
 
-const CustomNav = () => (
-  <header className="lk-header lk-c-flex">
 
-    <div className="lk-log">Logo here</div>
+
+
+const CustomNav = () => { 
+ const [hiden, setHide] = useState(true);
+ 
+ useEffect(() => {
+  // setMessage('');
+  
+  }, [hiden]);
+
+
+  const closeNav = () => {
+   if (!hiden) {
+      let doc = document.querySelector('.lk-header')
+      doc.classList.add("lk-hide");
+      setHide(!hiden)
+   }
+     
+  }
+ 
+  const openNav = () => {
+   let doc = document.querySelector('.lk-header')
+   doc.classList.remove("lk-hide");
+   setHide(!hiden)
+ }
+
+ return (
+  <>
+  <header className="lk-header nav-mobile lk-hide lk-c-flex">
+    <div className='lk-close lk-flex'>
+    <FaTimes className="fa" onClick={closeNav}/>
+    </div>
+    <div className="lk-log  lk-flex"> <img src={image} alt='logo' /></div>
     <div className="lk-nav-wrapper lk-c-flex">
       <nav className="lk-nav-container lk-c-flex">
         <ul className="nav-ul lk-c-flex">
           <li><Link to="/" className="nav-list">Hotels</Link></li>
-          <li><Link to="/user-reservation" className="">Reservation</Link></li>
-          <li><Link to="/my-reservation" className="">My Reservation</Link></li>
-          <li><Link to="/signup" className="">Signup</Link></li>
-          <li><Link to="/logout" className="">Logout</Link></li>
-          <li><Link to="/login" className="">login</Link></li>
+          <li><Link to="/user-reservation" className="" onClick={closeNav}>Reservation</Link></li>
+          <li><Link to="/my-reservation" className="" onClick={closeNav}>My Reservation</Link></li>
+          <li><Link to="/signup" className="" onClick={closeNav}>Signup</Link></li>
+          <li><Link to="/logout" className="" onClick={closeNav}>Logout</Link></li>
+          <li><Link to="/login" className="" onClick={closeNav}>login</Link></li>
         </ul>
       </nav>
 
@@ -36,6 +68,11 @@ const CustomNav = () => (
       </div>
     </div>
   </header>
-);
+   <div className='lk-menu'>
+     <FaBars className="fa" onClick={openNav} />
+   </div>
+
+  </> 
+)};
 
 export default CustomNav;
