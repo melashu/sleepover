@@ -38,6 +38,11 @@ const Hotel = () => {
   return (
     <div>
       <h2 className="me-title">Available Hotels for reservations</h2>
+      {hotels.length === 0 ? (
+        <div>
+          <h3 className="spinner">Loading...</h3>
+        </div>
+      ) : null}
       <Carousel
         swipeable
         draggable={false}
@@ -64,7 +69,10 @@ const Hotel = () => {
               alt={hotel.name}
             />
             <div className="card-body text-center">
-              <h2 className="me-card-title">{hotel.name}</h2>
+              <h4 className="me-card-title">
+                Hotel Name
+                <strong>{hotel.name}</strong>
+              </h4>
               <p className="card-text detail">{hotel.detail}</p>
               <p className="card-text">
                 <strong>
@@ -76,7 +84,7 @@ const Hotel = () => {
                 {' '}
 
               </p>
-              <Link to={hotel.name} state={hotel} className="btn btn-primary">
+              <Link to={`hotel/${hotel.id}`} state={hotel} className="btn btn-primary">
                 See all rooms
               </Link>
             </div>

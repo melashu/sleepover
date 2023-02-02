@@ -1,12 +1,20 @@
+
+import React from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
+
 import React, { useState, useEffect } from 'react';
-import {
-  Link,
-} from 'react-router-dom';
+
 import {
   FaTwitter, FaFacebookF, FaGooglePlus, FaVenus,
   FaPinterestP, FaBars, FaTimes,
 } from 'react-icons/fa';
-import image from '../../assets/log.jpg';
+
+import Login from '../login/Login';
+import Signup from '../signup/signup';
+import logo from '../../assets/logo.ico';
+
+
+import image from '../../assets/logo.ico';
 
 const CustomNav = () => {
   const [hiden, setHide] = useState(true);
@@ -35,6 +43,7 @@ const CustomNav = () => {
       <header className="lk-header nav-mobile lk-hide lk-c-flex">
         <div className="lk-close lk-flex">
           <FaTimes className="fa" onClick={closeNav} />
+
         </div>
         <div className="lk-log  lk-flex">
           {' '}
@@ -44,7 +53,6 @@ const CustomNav = () => {
           <nav className="lk-nav-container lk-c-flex">
             <ul className="nav-ul lk-c-flex">
               <li><Link to="/" className="nav-list">Hotels</Link></li>
-              <li><Link to="/user-reservation" className="" onClick={closeNav}>Reservation</Link></li>
               <li><Link to="/my-reservation" className="" onClick={closeNav}>My Reservation</Link></li>
               <li><Link to="/signup" className="" onClick={closeNav}>Signup</Link></li>
               <li><Link to="/logout" className="" onClick={closeNav}>Logout</Link></li>
@@ -70,8 +78,11 @@ const CustomNav = () => {
         <FaBars className="fa" onClick={openNav} />
       </div>
 
+    </div>
+
+  </header>
     </>
-  );
-};
+);
+
 
 export default CustomNav;
