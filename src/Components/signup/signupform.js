@@ -18,27 +18,24 @@ const SignUpForm = () => {
     (state) => state.user,
   );
 
-     const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    useEffect(() => {
-    }, [passwordMismatch]);
+  useEffect(() => {
+  }, [passwordMismatch]);
 
-    useEffect(() => {
-    
-     if(user.signupResponseMsg === 'Created'){
+  useEffect(() => {
+    if (user.signupResponseMsg === 'Created') {
       navigate('/login');
-     }
-   }, [user]);
-
+    }
+  }, [user]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (e.target.password.value !== e.target.confirm_password.value) {
       // dispatch(passwordMismatch());
-      setPasswordMismatch('Password mismatch!')
-      
+      setPasswordMismatch('Password mismatch!');
     } else {
-      setPasswordMismatch('')
+      setPasswordMismatch('');
       dispatch(userSignUp({
         name: e.target.name.value,
         username: e.target.username.value,
@@ -48,18 +45,17 @@ const SignUpForm = () => {
     }
   };
 
-   
-
   return (
     <form onSubmit={handleSubmit} className="lk-signUpForm lk-c-flex">
       <div className="lk-error ">
         <ul className="lk-error-message">
-          {<li >{passwordMismatch}</li>}
-          
-          { 
+          <li>{passwordMismatch}</li>
+
+          {
            user.errorMessages.errors && user.errorMessages.errors.map((er) => (
-            <li key={er}>{er}</li>
-          ))  }
+             <li key={er}>{er}</li>
+           ))
+}
 
         </ul>
       </div>
