@@ -60,7 +60,7 @@ const Login = () => {
       if (user.isAuthenticated && user.user.role === 'admin') {
         history('/admin');
       } else if (user.isAuthenticated && user.user.role === 'user') {
-        history('/my-reservation');
+        history('/');
         // <Navigate to="/my-reservation" replace />;
       }
     }

@@ -5,7 +5,7 @@ import api from '../module/api';
 const initialState = {
 
   Loading: false,
-  isAuthenticated: true,
+  isAuthenticated: false,
   responseCode: '',
   errorMessages: { error: [] },
   signupResponseMsg: null,

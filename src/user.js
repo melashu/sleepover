@@ -26,47 +26,42 @@ import Myreservation from './Components/Myreservation/myreservation';
 // import RouteConfig from './Components/Admin/RouteAdmin';
 
 function UsersPage() {
-  // const loginstatus = useSelector(authenticated);
 
-
-  // eg 127.168.1.34/login
   return (
     <div>
       <div className="lk-app-container lk-flex ">
         <CustomNav />
         <div className="me-inner">
           <Routes>
-            {/* <Route path="/login" element={<Login />} />
-            
-            <Route path="/my-reservation" element={(
-                <Protected>
-                  <Myreservation />
-                </Protected>
-              )}
-            /> */}
-
-            <Route path='/' >
+            <Route path="/">
               <Route index element={<Hotel />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
 
-
-              
+              <Route
+                path="/my-reservation"
+                element={
+                  <Protected>
+                    <Myreservation />
+                  </Protected>
+                }
+              />
               <Route path="/hotel/:id">
                 <Route index element={<Hoteldetail />} />
                 <Route path="detail">
                   <Route index element={<RoomDetail />} />
                   <Route
                     path="create-reserve"
-                    element={(
+                    element={
                       <Protected>
                         <CreateReserve />
                       </Protected>
-                    )}
+                    }
                   />
                 </Route>
               </Route>
             </Route>
-      
+
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>

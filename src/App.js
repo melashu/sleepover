@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
        <Routes>
-          <Route path='/' element ={<UsersPage />} />
+          <Route path='/*' element ={<UsersPage />} />
           <Route path='/admin/*' element ={<RouteAdmin />} />
        </Routes>  
     </div>
