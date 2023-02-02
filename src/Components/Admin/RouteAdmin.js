@@ -39,7 +39,6 @@ export default function RouteAdmin() {
                 </Protected>
               )}
             />
-            <Route path="/" element={<Login />} />
             <Route path="/manageHotel">
               <Route
                 index

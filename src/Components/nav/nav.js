@@ -1,5 +1,3 @@
-
-import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 
 import React, { useState, useEffect } from 'react';
@@ -11,8 +9,6 @@ import {
 
 import Login from '../login/Login';
 import Signup from '../signup/signup';
-import logo from '../../assets/logo.ico';
-
 
 import image from '../../assets/logo.ico';
 
@@ -61,13 +57,13 @@ const CustomNav = () => {
           </nav>
 
           <div className="lk-social lk-c-flex ">
-            <di className="lk-social-wrapper lk-flex">
+            <div className="lk-social-wrapper lk-flex">
               <Link to="h" className="nav-list"><FaTwitter className="fa" /></Link>
               <Link to="h" className="nav-list"><FaFacebookF className="fa" /></Link>
               <Link to="h" className="nav-list"><FaGooglePlus className="fa" /></Link>
               <Link to="h" className="nav-list"><FaVenus className="fa" /></Link>
               <Link to="h" className="nav-list"><FaPinterestP className="fa" /></Link>
-            </di>
+            </div>
             <div className="lk-copy-right lk">
               <p>2023 SleepOver all right reserved</p>
             </div>
@@ -77,12 +73,8 @@ const CustomNav = () => {
       <div className="lk-menu">
         <FaBars className="fa" onClick={openNav} />
       </div>
-
-    </div>
-
-  </header>
     </>
-);
-
+  );
+};
 
 export default CustomNav;
