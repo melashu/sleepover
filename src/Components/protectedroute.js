@@ -6,7 +6,7 @@ import { authenticated } from '../Redux/users/users';
 const Protected = ({ children }) => {
   const loginstatus = useSelector(authenticated);
   if (!loginstatus) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/login" replace />;
   }
   return children;
 };
