@@ -4,7 +4,7 @@ import { fetchreserved } from '../../../Redux/Admin/historyReserved';
 import './HistoryReserved.css';
 
 const AllReserved = () => {
-  const { reserved } = useSelector((state) => state.reserved);
+  const { reserved } = useSelector((state) => state.historyreserved);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const AllReserved = () => {
     return (
       <div className="container bg-dark d-flex justify-content-center my-5 py-5">
         <div className="row">
-          <h1 className="col-12 ABLoading"> Reserved Room Loading ...</h1>
+          <h1 className="col-12 ABLoading"> Loading ...</h1>
         </div>
       </div>
     );
@@ -24,7 +24,7 @@ const AllReserved = () => {
 
   return (
     <div className="container AllReserved bg-dark p-5">
-      <h1 className="text-center py-5 ABTotalTitle">All Reserved Room</h1>
+      <h1 className="text-center py-5 ABTotalTitle">Previously reserved room</h1>
       <div className="row my-5">
         <div className="col-12 row">
           {reserved.map((item) => (

@@ -33,12 +33,14 @@
 }
 
 .me-hotel-image{
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
 }
 
 .me-hotel{
   display: flex;
+  margin: 10px;
+  padding: 8px;
   gap: 32px;
   border-bottom: 5px solid #1c6ea4;
   border-radius: 10px;

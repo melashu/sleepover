@@ -19,8 +19,16 @@
   margin-bottom: 10px;
   border-bottom: 5px solid #1c6ea4;
   border-radius: 10px;
-
+  display: flex;
+  img{
+    width: 350px;
+    height: 350px;
+  }
+  p{
+    font-weight: bold;
+  }
   &:hover {
     background-color: rgb(240, 240, 240);
   }
+
 }

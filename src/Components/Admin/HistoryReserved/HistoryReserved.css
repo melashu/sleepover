@@ -9,4 +9,5 @@ img.ABRoomImage {
 .ABTotalTitle,
 .ABLoading {
   color: #96bf01;
+  font-style: italic;
 }

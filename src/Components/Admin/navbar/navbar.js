@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './navbar.scss';
 
 const Navbar = () => {
-   const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.user);
+  console.log(user)
  return (
    <div className="navbar bg-dark text-white">
      <p>

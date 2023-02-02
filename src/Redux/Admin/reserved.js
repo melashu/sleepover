@@ -4,7 +4,7 @@ const GET_RESERVED = 'GET_RESERVED';
 
 const initialState = { reserved: [] };
 
-const Api = 'http://127.0.0.1:3000//api/v1/reservations/all';
+const Api = 'http://127.0.0.1:3000/api/v1/reservations';
 
 const fetchReducer = (state = initialState, action) => {
   switch (action.type) {

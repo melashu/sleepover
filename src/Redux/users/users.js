@@ -13,7 +13,6 @@ const initialState = {
   error: '',
   user: '',
   msg: '',
-
 };
 
 export const userSignUp = api.signup;
