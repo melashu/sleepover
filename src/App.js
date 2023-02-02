@@ -21,54 +21,54 @@ import { authenticated } from './Redux/users/users';
 
 function App() {
   const loginstatus = useSelector(authenticated);
-
-  return (
-    <div>
-      <div className="lk-app-container lk-flex ">
-        <CustomNav />
-        <div className="me-inner">
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="*" element={<PageNotFound />} />
-            <Route
-              path="/admin/*"
-              element={(
-                <Protected>
-                  <Admin />
-                </Protected>
-              )}
-            />
-            <Route
-              path="/my-reservation"
-              element={(
-                <Protected>
-                  <Myreservation />
-                </Protected>
-              )}
-            />
-            <Route path="/">
-              <Route index element={<Hotel />} />
-              <Route path="hotel/:id">
-                <Route index element={<Hoteldetail />} />
-                <Route path="detail">
-                  <Route index element={<RoomDetail />} />
-                  <Route
-                    path="create-reserve"
-                    element={(
-                      <Protected>
-                        <CreateReserve />
-                      </Protected>
-                    )}
-                  />
-                </Route>
-              </Route>
-            </Route>
-          </Routes>
-        </div>
-      </div>
-    </div>
-  );
+   return <Admin/>
+  // return (
+  //   <div>
+  //     <div className="lk-app-container lk-flex ">
+  //       <CustomNav />
+  //       <div className="me-inner">
+  //         <Routes>
+  //           <Route path="/login" element={<Login />} />
+  //           <Route path="/signup" element={<Signup />} />
+  //           <Route path="*" element={<PageNotFound />} />
+  //           <Route
+  //             path="/admin/*"
+  //             element={(
+  //               <Protected>
+  //                 <Admin />
+  //               </Protected>
+  //             )}
+  //           />
+  //           <Route
+  //             path="/my-reservation"
+  //             element={(
+  //               <Protected>
+  //                 <Myreservation />
+  //               </Protected>
+  //             )}
+  //           />
+  //           <Route path="/">
+  //             <Route index element={<Hotel />} />
+  //             <Route path="hotel/:id">
+  //               <Route index element={<Hoteldetail />} />
+  //               <Route path="detail">
+  //                 <Route index element={<RoomDetail />} />
+  //                 <Route
+  //                   path="create-reserve"
+  //                   element={(
+  //                     <Protected>
+  //                       <CreateReserve />
+  //                     </Protected>
+  //                   )}
+  //                 />
+  //               </Route>
+  //             </Route>
+  //           </Route>
+  //         </Routes>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default App;

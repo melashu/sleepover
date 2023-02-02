@@ -37,8 +37,8 @@ const CreateRoom = () => {
     data.append('photo', photo[0]);
     try {
       const response = await axios.post(
-        'http://127.0.0.1:3000/api/v1/rooms',
-        data,
+        "https://sleepoverapi.onrender.com/api/v1/rooms",
+        data
       );
       if (response.data.message === 'success') {
         setMessage('Successfuly created!');

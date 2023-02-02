@@ -31,3 +31,15 @@
   background-color: aqua;
   width: 100%;
 }
+
+.me-hotel-image{
+  width: 200px;
+  height: 200px;
+}
+
+.me-hotel{
+  display: flex;
+  gap: 32px;
+  border-bottom: 5px solid #1c6ea4;
+  border-radius: 10px;
+}

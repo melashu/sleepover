@@ -42,7 +42,7 @@ const hotelSlices = createSlice({
     },
     [getHotelThank.rejected]: (state) => {
       state.loadingStatus = 'rejected';
-      alert('no');
+      // alert('no');
     },
     // [createUnreservedHotelThunk.fulfilled]: (state, { payload }) => {
     //   state.unReservedHotels = payload;
