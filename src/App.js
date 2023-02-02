@@ -21,8 +21,7 @@ function App() {
   return (
     <div>
 
-      {/* <CustomNav /> */}
-      {/* <RouteConfig /> */}
+      
       <div className="lk-app-container lk-flex ">
         <CustomNav />
         <div className="me-inner">
