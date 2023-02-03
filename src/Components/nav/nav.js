@@ -7,18 +7,20 @@ import {
   FaPinterestP, FaBars, FaTimes,
 } from 'react-icons/fa';
 
+import { useDispatch, useSelector } from 'react-redux';
 import Login from '../login/Login';
 import Signup from '../signup/signup';
 
 import image from '../../assets/logo.ico';
+import { logout } from '../../Redux/users/users';
 
 const CustomNav = () => {
   const [hiden, setHide] = useState(true);
-
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const [log, setLog] = useState(true);
   useEffect(() => {
-  // setMessage('');
-
-  }, [hiden]);
+  }, [hiden, log]);
 
   const closeNav = () => {
     if (!hiden) {
@@ -39,7 +41,6 @@ const CustomNav = () => {
       <header className="lk-header nav-mobile lk-hide lk-c-flex">
         <div className="lk-close lk-flex">
           <FaTimes className="fa" onClick={closeNav} />
-
         </div>
         <div className="lk-log  lk-flex">
           {' '}
@@ -48,21 +49,73 @@ const CustomNav = () => {
         <div className="lk-nav-wrapper lk-c-flex">
           <nav className="lk-nav-container lk-c-flex">
             <ul className="nav-ul lk-c-flex">
-              <li><Link to="/" className="nav-list" onClick={closeNav} >Hotels</Link></li>
-              <li><Link to="/my-reservation" className="" onClick={closeNav}>My Reservation</Link></li>
-              <li><Link to="/signup" className="" onClick={closeNav}>Signup</Link></li>
-              <li><Link to="/logout" className="" onClick={closeNav}>Logout</Link></li>
-              <li><Link to="/login" className="" onClick={closeNav}>Login</Link></li>
+              <li>
+                <Link
+                  to="/"
+                  className="nav-list"
+                  onClick={() => {
+                    closeNav();
+                  }}
+                >
+                  Hotels
+                </Link>
+              </li>
+              <li>
+                <Link to="/my-reservation" className="" onClick={closeNav}>
+                  My Reservation
+                </Link>
+              </li>
+              {user.isAuthenticated ? (
+                <li>
+                  <Link
+                    to="/logout"
+                    className=""
+                    onClick={(e) => {
+                      e.preventDefault();
+                      closeNav();
+                      dispatch(logout());
+                      setLog(!log);
+                    }}
+                  >
+                    Logout
+                  </Link>
+                </li>
+              ) : null}
+              {' '}
+              {user.isAuthenticated ? null : (
+                <li>
+                  <Link to="/signup" className="" onClick={closeNav}>
+                    Signup
+                  </Link>
+                </li>
+              )}
+              {user.isAuthenticated ? null : (
+                <li>
+                  <Link to="/login" className="" onClick={closeNav}>
+                    Login
+                  </Link>
+                </li>
+              )}
             </ul>
           </nav>
 
           <div className="lk-social lk-c-flex ">
             <div className="lk-social-wrapper lk-flex">
-              <Link to="h" className="nav-list"><FaTwitter className="fa" /></Link>
-              <Link to="h" className="nav-list"><FaFacebookF className="fa" /></Link>
-              <Link to="h" className="nav-list"><FaGooglePlus className="fa" /></Link>
-              <Link to="h" className="nav-list"><FaVenus className="fa" /></Link>
-              <Link to="h" className="nav-list"><FaPinterestP className="fa" /></Link>
+              <Link to="h" className="nav-list">
+                <FaTwitter className="fa" />
+              </Link>
+              <Link to="h" className="nav-list">
+                <FaFacebookF className="fa" />
+              </Link>
+              <Link to="h" className="nav-list">
+                <FaGooglePlus className="fa" />
+              </Link>
+              <Link to="h" className="nav-list">
+                <FaVenus className="fa" />
+              </Link>
+              <Link to="h" className="nav-list">
+                <FaPinterestP className="fa" />
+              </Link>
             </div>
             <div className="lk-copy-right lk">
               <p>2023 SleepOver all right reserved</p>
