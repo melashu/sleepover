@@ -66,7 +66,7 @@ const Login = () => {
   };
 
   return (
-    <div className="backdrop-saturate-25 login-picture w-sreen h-screen bg-cover flex flex-col justify-center items-center p-2 bg-black bg-opacity-50">
+    <div className="backdrop-saturate-25 w-full login-picture w-sreen h-screen bg-cover flex flex-col justify-center items-center p-2 bg-black bg-opacity-50">
       <div className="flex relative flex-col justify-center items-center bg-black bg-opacity-50 p-5 py-20">
         <h1 className="text-white-300 text-white mb-5 uppercase">Login</h1>
         <div className="login flex flex-col justify-center items-center">
