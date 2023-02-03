@@ -2,6 +2,9 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import logo from '../../assets/hotel.jpg'
+import loading from '../../assets/loding.svg'
+
 
 const Hoteldetail = () => {
   const { state } = useLocation();
@@ -24,13 +27,16 @@ const Hoteldetail = () => {
   };
 
   return (
-    <div>
+    <div className='lk-hotel-container lk-c-flex'>
       <h2 className="me-title">
-        Available Rooms inside
+        Available Rooms inside 
+        {' '}
         {state.name}
         {' '}
         Hotel
       </h2>
+
+
       <Carousel
         swipeable
         draggable={false}
@@ -47,12 +53,13 @@ const Hoteldetail = () => {
         centerMode
         containerClass="carousel-container"
         removeArrowOnDeviceType={['tablet', 'mobile']}
-        itemClass="carousel-item-padding-40-px"
+        itemClass="carousel-item-padding-40-px lk-item"
       >
         {state.rooms.map((room) => (
-          <div className="card" key={room.id}>
+          <div className="card lk-flex" key={room.id}>
             <img
-              src={room.photo.url}
+            // Todo: remember to change the logo
+              src={logo}
               className="card-img-top"
               alt={room.room_no}
             />
@@ -62,7 +69,7 @@ const Hoteldetail = () => {
                 {' '}
                 <strong>{room.room_no}</strong>
               </h2>
-              <p className="card-text">
+              <p className="card-text detail">
                 Number of bed
                 {' '}
                 <strong>{room.number_of_bed}</strong>
@@ -77,7 +84,7 @@ const Hoteldetail = () => {
                 </strong>
                 {' '}
               </p>
-              <Link to="detail" state={room}  className="btn btn-primary">
+              <Link to="detail" state={room}  className="btn btn-primary lk-btn-green">
                 See Detail
               </Link>
             </div>

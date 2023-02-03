@@ -252,7 +252,7 @@ body {
 .lk-hotel-container{
  width: 100%;
  background-color: white;
- border: 1px solid red;
+
  height: 100vh;
  justify-content: center;
  right: 0;
@@ -261,6 +261,7 @@ body {
 
 .lk-hotel-container h2{
   font-size: 1.6rem;
+  margin-top:2%
 }
 
 
@@ -269,7 +270,7 @@ body {
   color: white ;
   background-color: var(--green-color);
   font-size: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border: none;
 }
 
@@ -279,6 +280,11 @@ body {
  
 }
 
+/* for show cards */
+.lk-loading{
+ width: 35%;
+ height: auto;
+}
 
 @media screen and (min-width: 768px) {
   .lk-header {
@@ -323,6 +329,13 @@ body {
   .lk-signup-wrapper {
     width: 50%;
   }
+
+  /* spinning icon */
+  .lk-loading{
+   width: 20%;
+   height: auto;
+ }
+
 }
 
 @media screen and (min-width: 1024px) {
