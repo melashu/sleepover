@@ -8,9 +8,7 @@ const unReserveRoomThunk = createAsyncThunk('unreserve', async () => {
 });
 
 const reservedRoomThunk = createAsyncThunk('reserve', async () => {
-  const response = await axios.get(
-    'http://127.0.0.1:3000/api/v1/reservations/all',
-  );
+  const response = await axios.get("http://127.0.0.1:3000/api/v1/reservations");
   return response.data;
 });
 

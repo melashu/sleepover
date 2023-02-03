@@ -35,16 +35,16 @@ const Widget = ({ type }) => {
       break;
     case 'reserved':
       card = {
-        title: 'Reserved Rooms',
+        title: "Reserved Rooms",
         counter: reserved.length,
-        link: '/reserved-room',
+        link: "/admin/reserved-room",
         icon: (
           <BedroomParent
             className="icon"
             style={{
-              color: 'rgb(0, 255, 0)',
-              backgroundColor: 'rgba(0, 255, 0,0.3)',
-              padding: '5px',
+              color: "rgb(0, 255, 0)",
+              backgroundColor: "rgba(0, 255, 0,0.3)",
+              padding: "5px",
             }}
           />
         ),
@@ -52,16 +52,16 @@ const Widget = ({ type }) => {
       break;
     case 'unreserved':
       card = {
-        title: 'Unreserved Room',
+        title: "Unreserved Room",
         counter: unreserved.length,
-        link: '/reserved-room',
+        link: "/admin/manageRoom",
         icon: (
           <HomeOutlined
             className="icon"
             style={{
-              color: 'rgb(255,255,0)',
-              backgroundColor: 'rgba(255,255,0,0.3)',
-              padding: '5px',
+              color: "rgb(255,255,0)",
+              backgroundColor: "rgba(255,255,0,0.3)",
+              padding: "5px",
             }}
           />
         ),
