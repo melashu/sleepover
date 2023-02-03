@@ -117,6 +117,15 @@ body {
   max-height: 85%;
 }
 
+.login {
+  background-color: white;
+}
+
+.input {
+  background-color: #e2e3e5;
+  width: 45%;
+}
+
 .nav-ul {
   list-style-type: none;
   padding: 2% 0;
@@ -247,13 +256,22 @@ body {
 }
 
 .login-btn {
-  background-color: #049cd8;
-  padding: 1rem 5rem;
+  background-color: var(--green-color);
+  padding: .7rem 3rem;
   border-radius: 5px;
+  margin-right: -43rem;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.need-sign {
+  margin-top: -3rem;
+  margin-left: -32rem;
 }
 
 .login-btn:hover {
-  background-color: #11ace9;
+  background-color: var(--green-color);
 }
 
 .bg-red {

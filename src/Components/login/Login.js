@@ -45,21 +45,21 @@ const Login = () => {
   };
 
   return (
-    <div className="backdrop-saturate-25 w-full login-picture w-sreen h-screen bg-cover flex flex-col justify-center items-center p-2 bg-black bg-opacity-50">
-      <div className="flex relative flex-col justify-center items-center bg-black bg-opacity-50 p-5 py-20">
-        <h1 className="text-white-300 text-white mb-5 uppercase">Login</h1>
-        <div className="login flex flex-col justify-center items-center">
+    <div className="login bg-white  w-full w-sreen h-screen bg-cover flex flex-col justify-center items-center p-2 bg-black">
+      <div className="flex relative flex-col justify-center items-center p-5 py-2 w-full">
+        <h1 className="text-white-300 text-black mb-5 uppercase">Login</h1>
+        <div className="flex flex-col items-center w-full">
           <input
             type="email"
             placeholder="email"
-            className="p-2 border rounded-lg"
+            className="p-2 border rounded-lg input"
             onChange={(e) => setEmail(e.target.value)}
           />
           <br />
           <input
             type="password"
             placeholder="password"
-            className="p-2 border rounded-lg"
+            className="p-2 border rounded-lg input"
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
@@ -74,7 +74,7 @@ const Login = () => {
         <p className="absolute top-0 left-50 h-15 w-full bg-red text-center text-white font-bold">
           {message}
         </p>
-        <div className="text-white flex mt-3">
+        <div className="text-black flex need-sign">
           <p>Need an account? </p>
           <a href="signup">Sign Up</a>
         </div>
