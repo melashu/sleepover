@@ -35,14 +35,13 @@
   max-width: 80%;
 }
 
-.me-admin-logo{
+.me-admin-logo {
   border-bottom: 5px solid #1c6ea4;
   border-radius: 10px;
-   margin:  0 auto;
+  margin: 0 auto;
 }
 
-.me-admin-logo img{
+.me-admin-logo img {
   width: 150px;
   height: 150px;
- 
 }

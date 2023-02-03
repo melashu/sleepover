@@ -48,7 +48,7 @@ const CustomNav = () => {
         <div className="lk-nav-wrapper lk-c-flex">
           <nav className="lk-nav-container lk-c-flex">
             <ul className="nav-ul lk-c-flex">
-              <li><Link to="/" className="nav-list" onClick={closeNav} >Hotels</Link></li>
+              <li><Link to="/" className="nav-list" onClick={closeNav}>Hotels</Link></li>
               <li><Link to="/my-reservation" className="" onClick={closeNav}>My Reservation</Link></li>
               <li><Link to="/signup" className="" onClick={closeNav}>Signup</Link></li>
               <li><Link to="/logout" className="" onClick={closeNav}>Logout</Link></li>

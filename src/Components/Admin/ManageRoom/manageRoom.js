@@ -30,7 +30,7 @@ const ManageRoom = () => {
 
   const deleteRoom = async (id) => {
     const response = await axios.delete(
-      `https://sleepoverapi.onrender.com/api/v1/rooms/${id}`
+      `https://sleepoverapi.onrender.com/api/v1/rooms/${id}`,
     );
     if (response.data.message === 'success') {
       dispatch(removeRoom(id));

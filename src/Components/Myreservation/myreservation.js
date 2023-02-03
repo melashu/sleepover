@@ -6,11 +6,11 @@ import { useSelector } from 'react-redux';
 const Myreservation = () => {
   const [reserved, setReserved] = useState([]);
   //   const dispatch = useDispatch();
-  const user = useSelector((state)=>state.user)
-  console.log(reserved)
+  const user = useSelector((state) => state.user);
+  console.log(reserved);
   const getMyreservation = async () => {
     const response = await axios.get(
-      `http://127.0.0.1:3000/api/v1/reservations/my/${user.user.id}`
+      `http://127.0.0.1:3000/api/v1/reservations/my/${user.user.id}`,
     );
     setReserved(response.data);
   };
@@ -29,30 +29,49 @@ const Myreservation = () => {
   }
   // console.log(reserved);
   return (
-    <div className="container AllReserved  p-5">
+    <div className="lk-hotel-container">
       <h1 className="text-center py-5 ABTotalTitle">Your reservations</h1>
       <div className="my-5">
-        <div className="">
-          {reserved.map((item) => {
-         return <div className="row" key={item.id}>
+        <div className="lk-myreservation lk-flex">
+          {reserved.map((item) => (
+            <div className=" " key={item.id}>
+
               <img
-                className="col-6 ABRoomImage"
+                className=" ABRoomImage"
                 src={item.room.photo.url}
                 alt="Room"
               />
+
               <div className="me-info">
-                <p>Your name: {item.user.name}</p>
-                <p>Your room number {item.room.room_no}</p>
-                <p>Number of bed {item.room.number_of_bed}</p>
-                <p>Price: {item.room.prices}$</p>
-                <p className="p-5">
+
+                <p>
+                  Your name:
+                  {item.user.name}
+                </p>
+                <p>
+                  Your room number
+                  {item.room.room_no}
+                </p>
+                <p>
+                  Number of bed
+                  {item.room.number_of_bed}
+                </p>
+                <p>
+                  Price:
+                  {item.room.prices}
+                  $
+                </p>
+                <p className="p-1">
                   Reserved from:
-                  {item.start_date} to
+                  {item.start_date}
+                  {' '}
+                  to
                   {item.end_date}
                 </p>
               </div>
+
             </div>
-          })}
+          ))}
         </div>
       </div>
     </div>

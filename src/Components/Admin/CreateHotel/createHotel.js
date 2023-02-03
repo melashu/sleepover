@@ -12,7 +12,7 @@ const CreateHotel = () => {
   const [phone, setPhone] = useState('');
   const [detail, setDetail] = useState('');
   const [message, setMessage] = useState('');
-  const currentUser = useSelector((state)=>state.user)
+  const currentUser = useSelector((state) => state.user);
 
   const create = async (e) => {
     e.preventDefault();
