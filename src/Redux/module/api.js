@@ -9,10 +9,8 @@ const headers = {
   Authorization: localStorage.getItem('token'),
 };
 
-// const
 const api = {
 
-  // Register user
   signup: createAsyncThunk(
     'users/userData',
     async (data) => {
@@ -24,7 +22,6 @@ const api = {
             headers,
           },
         );
-        // console.log(response);
         return response.data;
       } catch (error) {
         return error;

@@ -24,7 +24,6 @@ const Myreservation = () => {
       </div>
     );
   }
-  // console.log(reserved);
   return (
     <div className="lk-hotel-container">
       <h1 className="text-center py-5 ABTotalTitle">Your reservations</h1>

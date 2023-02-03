@@ -71,9 +71,7 @@ const usersSlice = createSlice({
 
     builder.addCase(loginUser.fulfilled, (state,
       { payload }) => {
-      // console.log("Payload", payload)
       if (payload.error === 'unauthorized') {
-        // state.error = error;
         return {
           ...state,
           error: payload.error,
@@ -94,13 +92,6 @@ const usersSlice = createSlice({
         token: payload.token,
         isAuthenticated: true,
       };
-      // state.msg = msg;
-      // state.user = user;
-      // state.token = token;
-      // state.error = '';
-      // localStorage.setItem('msg', msg);
-      // localStorage.setItem('user', JSON.stringify(user));
-      // localStorage.setItem('token', token);
     });
 
     builder.addCase(loginUser.rejected, (state) => ({
