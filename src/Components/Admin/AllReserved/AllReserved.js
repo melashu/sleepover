@@ -23,13 +23,13 @@ const AllReserved = () => {
   }
 
   return (
-    <div className="container AllReserved bg-light p-5">
+    <div className="container AllReserved bg-light text-dark p-5">
       <h1 className="text-center py-5 ABTotalTitle">All Reserved Room</h1>
       <div className="row my-5">
         <div className="col-12 row">
           {reserved.map((item) => (
             <div className="col-6 row px-5" key={item.id}>
-              <img className="col-6 ABRoomImage" src={item.room.photo} alt="Room" />
+              <img className="col-6 ABRoomImage" src={item.room.photo.url} alt="Room" />
               <div className="col-6">
                 <h3 className="col-12">
                   User: &nbsp;
