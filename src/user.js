@@ -24,7 +24,6 @@ import Myreservation from './Components/Myreservation/myreservation';
 
 function UsersPage() {
   return (
-
     <div className="lk-app-container lk-flex ">
       <CustomNav />
 
@@ -40,7 +39,7 @@ function UsersPage() {
               <Protected>
                 <Myreservation />
               </Protected>
-                )}
+            )}
           />
           <Route path="/hotel/:id">
             <Route index element={<Hoteldetail />} />
@@ -52,32 +51,15 @@ function UsersPage() {
                   <Protected>
                     <CreateReserve />
                   </Protected>
-
                 )}
               />
-              <Route path="/hotel/:id">
-                <Route index element={<Hoteldetail />} />
-                <Route path="detail">
-                  <Route index element={<RoomDetail />} />
-                  <Route
-                    path="create-reserve"
-                    element={(
-                      <Protected>
-                        <CreateReserve />
-                      </Protected>
-                    )}
-                  />
-                </Route>
-              </Route>
             </Route>
           </Route>
         </Route>
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-
     </div>
-
   );
 }
 
