@@ -4,9 +4,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
 import './hotel.scss';
-import logo from '../../assets/hotel.jpg'
-import loading from '../../assets/loding.svg'
-
+import logo from '../../assets/hotel.jpg';
+import loading from '../../assets/loding.svg';
 
 const Hotel = () => {
   const [hotels, setHotels] = useState([]);
@@ -39,15 +38,15 @@ const Hotel = () => {
   };
 
   return (
-    <div className='lk-hotel-container lk-c-flex'>
+    <div className="lk-hotel-container lk-c-flex">
       <h2 className="me-title">Available Hotels for reservations</h2>
       {hotels.length === 0 ? (
-        <div className='loading-wrapper'>
-        <img
-              src={loading}
-              className="lk-loading"
-              alt='Loading'
-            />
+        <div className="loading-wrapper">
+          <img
+            src={loading}
+            className="lk-loading"
+            alt="Loading"
+          />
         </div>
       ) : null}
       <Carousel
@@ -72,25 +71,31 @@ const Hotel = () => {
           <div className="card lk-flex" key={hotel.id}>
             <img
               // Todo: remember to change the logo
-              src={logo}  
+              src={logo}
               className="card-img-top"
               alt={hotel.name}
             />
             <div className="card-body text-center">
               <h4 className="me-card-title">
-             
-              {hotel.name}
+
+                {hotel.name}
               </h4>
-              <p className="card-text detail">Country <strong>{hotel.country}</strong></p>
-              <p className="card-text detail">City <strong>{hotel.city}</strong></p>
+              <p className="card-text detail">
+                Country
+                <strong>{hotel.country}</strong>
+              </p>
+              <p className="card-text detail">
+                City
+                <strong>{hotel.city}</strong>
+              </p>
               <p className="card-text detail">{hotel.detail}</p>
               <p className="card-text">
-    
-                  {hotel.rooms.length}
-                  {' '}
-                  unreserved room
-                  available.
-             
+
+                {hotel.rooms.length}
+                {' '}
+                unreserved room
+                available.
+
                 {' '}
 
               </p>

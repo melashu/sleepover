@@ -2,9 +2,8 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import logo from '../../assets/hotel.jpg'
-import loading from '../../assets/loding.svg'
-
+import logo from '../../assets/hotel.jpg';
+import loading from '../../assets/loding.svg';
 
 const Hoteldetail = () => {
   const { state } = useLocation();
@@ -27,15 +26,14 @@ const Hoteldetail = () => {
   };
 
   return (
-    <div className='lk-hotel-container lk-c-flex'>
+    <div className="lk-hotel-container lk-c-flex">
       <h2 className="me-title">
-        Available Rooms inside 
+        Available Rooms inside
         {' '}
         {state.name}
         {' '}
         Hotel
       </h2>
-
 
       <Carousel
         swipeable
@@ -84,7 +82,7 @@ const Hoteldetail = () => {
                 </strong>
                 {' '}
               </p>
-              <Link to="detail" state={room}  className="btn btn-primary lk-btn-green">
+              <Link to="detail" state={room} className="btn btn-primary lk-btn-green">
                 See Detail
               </Link>
             </div>
