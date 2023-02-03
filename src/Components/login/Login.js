@@ -7,7 +7,6 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const [isSuccess, setSuccess] = useState(false);
   const dispatch = useDispatch();
   const history = useNavigate();
   const user = useSelector(

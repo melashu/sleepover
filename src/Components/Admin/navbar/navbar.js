@@ -5,7 +5,9 @@ import './navbar.scss';
 const Navbar = () => {
   const user = useSelector((state) => state.user);
   return (
+
     <div className="navbar bg-dark text-light">
+
       <p>
         You Loged as
         {' '}

@@ -4,6 +4,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Link } from 'react-router-dom';
 import './hotel.scss';
+import logo from '../../assets/hotel.jpg';
+import loading from '../../assets/loding.svg';
 
 const Hotel = () => {
   const [hotels, setHotels] = useState([]);
@@ -36,11 +38,15 @@ const Hotel = () => {
   };
 
   return (
-    <div>
+    <div className="lk-hotel-container lk-c-flex">
       <h2 className="me-title">Available Hotels for reservations</h2>
       {hotels.length === 0 ? (
-        <div>
-          <h3 className="spinner">Loading...</h3>
+        <div className="loading-wrapper">
+          <img
+            src={loading}
+            className="lk-loading"
+            alt="Loading"
+          />
         </div>
       ) : null}
       <Carousel
@@ -58,20 +64,21 @@ const Hotel = () => {
         focusOnSelect
         centerMode
         containerClass="carousel-container"
-        removeArrowOnDeviceType={['tablet', 'mobile']}
-        itemClass="carousel-item-padding-40-px"
+        // removeArrowOnDeviceType={['tablet', 'mobile']}
+        itemClass="carousel-item-padding-40-px lk-item"
       >
         {hotels.map((hotel) => (
-          <div className="card" key={hotel.id}>
+          <div className="card lk-flex" key={hotel.id}>
             <img
-              src={hotel.image.url}
+              // Todo: remember to change the logo
+              src={logo}
               className="card-img-top"
               alt={hotel.name}
             />
             <div className="card-body text-center">
               <h4 className="me-card-title">
-                Hotel Name
-                <strong>{hotel.name}</strong>
+
+                {hotel.name}
               </h4>
               <p className="card-text detail">
                 Country
@@ -83,16 +90,16 @@ const Hotel = () => {
               </p>
               <p className="card-text detail">{hotel.detail}</p>
               <p className="card-text">
-                <strong>
-                  {hotel.rooms.length}
-                  {' '}
-                  unreserved room
-                  available.
-                </strong>
+
+                {hotel.rooms.length}
+                {' '}
+                unreserved room
+                available.
+
                 {' '}
 
               </p>
-              <Link to={`hotel/${hotel.id}`} state={hotel} className="btn btn-primary">
+              <Link to={`hotel/${hotel.id}`} state={hotel} className="btn btn-primary lk-btn-green">
                 See all rooms
               </Link>
             </div>

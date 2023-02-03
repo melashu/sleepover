@@ -24,22 +24,37 @@ import Myreservation from './Components/Myreservation/myreservation';
 
 function UsersPage() {
   return (
-    <div>
-      <div className="lk-app-container lk-flex ">
-        <CustomNav />
-        <div className="me-inner">
-          <Routes>
-            <Route path="/">
-              <Route index element={<Hotel />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
 
+    <div className="lk-app-container lk-flex ">
+      <CustomNav />
+
+      <Routes>
+        <Route path="/">
+          <Route index element={<Hotel />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+
+          <Route
+            path="/my-reservation"
+            element={(
+              <Protected>
+                <Myreservation />
+              </Protected>
+                )}
+          />
+          <Route path="/hotel/:id">
+            <Route index element={<Hoteldetail />} />
+            <Route path="detail">
+              <Route index element={<RoomDetail />} />
               <Route
-                path="/my-reservation"
+
+                path="create-reserve"
+
                 element={(
                   <Protected>
-                    <Myreservation />
+                    <CreateReserve />
                   </Protected>
+
                 )}
               />
               <Route path="/hotel/:id">
@@ -57,12 +72,14 @@ function UsersPage() {
                 </Route>
               </Route>
             </Route>
+          </Route>
+        </Route>
 
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </div>
-      </div>
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+
     </div>
+
   );
 }
 

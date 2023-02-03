@@ -1,11 +1,9 @@
-// import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 
 const Myreservation = () => {
   const [reserved, setReserved] = useState([]);
-  //   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const getMyreservation = async () => {
     const response = await axios.get(

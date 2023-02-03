@@ -21,23 +21,25 @@ export default function sideRoute() {
         </div>
       </div>
       <ul className="offcanvas-body my-2">
-        <li className="offcanvas-body ABTitleNav py-3 mb-2 d-flex justify-content-start align-items-center gap-3">
+
+        <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
           <Dashboard style={{ backgroundColor: '#fff' }} />
           <Link to="/admin">Dashboard</Link>
         </li>
-        <li className="offcanvas-body ABTitleNav py-3 mb-2 d-flex justify-content-start align-items-center gap-3">
+        <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
           <HotelIcon style={{ backgroundColor: '#fff' }} />
           <Link to="/admin/manage-hotel">Manage Hotel</Link>
         </li>
-        <li className="offcanvas-body ABTitleNav py-3 mb-2 d-flex justify-content-start align-items-center gap-3">
+        <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
           <Bed style={{ backgroundColor: '#fff' }} />
           <Link to="/admin/manageRoom">Manage Room</Link>
         </li>
-        <li className="offcanvas-body ABTitleNav py-3 mb-2 d-flex justify-content-start align-items-center gap-3">
+        <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
           <CircleOutlined style={{ backgroundColor: '#fff' }} />
           <Link to="/admin/reserved-room">Reservations</Link>
         </li>
-        <li className="offcanvas-body ABTitleNav py-3 mb-2 d-flex justify-content-start align-items-center gap-3">
+        <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
+
           <CircleOutlined style={{ backgroundColor: '#fff' }} />
           <Link to="/admin/history-reserved-room">History Reservations</Link>
         </li>

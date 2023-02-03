@@ -34,9 +34,9 @@ body {
   background-color: var(--gray-color);
 }
 
-.lk-app-container {
+#root{
   position: relative;
-}
+} 
 
 .lk-c-flex,
 .lk-flex {
@@ -54,7 +54,6 @@ body {
   padding-top: 1rem;
   height: 100vh;
   border-right: 1px solid var(--gray-color);
-
   /* justify-items: space-between; */
   flex-direction: column;
 }
@@ -80,7 +79,7 @@ body {
 
 .nav-mobile {
   position: absolute;
-  display: flex;
+  /* display: flex; */
   z-index: 1000;
   top: 0;
   right: 0;
@@ -250,12 +249,123 @@ body {
 /* h1 {
   color: var(--yellow-color);
 } */
+.lk-hotel-container{
+ width: 100%;
+ background-color: white;
+
+ height: 100vh;
+ justify-content: center;
+ right: 0;
+}
+
+
+.lk-hotel-container h2{
+  font-size: 1.6rem;
+  margin-top:2%
+}
+
+
+
+.lk-btn-green{
+  color: white ;
+  background-color: var(--green-color);
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  border: none;
+}
+
+.lk-btn-green:hover{
+ color: white ;
+ background-color: #88ad02;
+ 
+}
+
+/* for show cards */
+.lk-loading{
+ width: 35%;
+ height: auto;
+}
+
+
+.lk-room-detail{
+ flex-direction: column;
+}
+
+.lk-reserve-room-img-wrapper{
+ justify-content: center;
+ align-content: center;
+  margin-top: 10%;
+  width: 100%;
+  padding: 4%;
+}
+
+.lk-reserve-room-details-wrapper{
+ width: 100%;
+ padding-top: 1rem;
+ align-items: center;
+}
+
+.lk-reserve-room-details{
+ width: 90%;
+ height: auto;
+ margin-left: 0.5rem ;
+ margin-right: 0.5rem ;
+}
+
+.lk-reserve-room-details p{
+ display: flex;
+ justify-content: space-between;
+ background-color: var(--dark-gray-color);
+ padding: 0.5rem;
+ font-weight: 500;
+ font-size: 1.4rem;
+}
+
+.lk-color-wheel{
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 0.5rem 0rem;
+}
+
+.lk-color-wheel img{
+ width: 35%;
+ height: auto;
+}
+
+.lk-btn-reserve-room-wrapper{
+ width: 100%;
+ justify-content: center;
+ margin-top: 1rem;
+}
+
+.lk-btn-reserve-room-wrapper a{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background-color:var(--green-color); 
+ color: white;
+ width: 70%;
+ padding: 0.7rem;
+ font-size: 1.6rem;
+ border-radius: 30rem;
+
+}
 
 @media screen and (min-width: 768px) {
   .lk-header {
     padding-top: 1rem;
     width: 25%;
     display: flex;
+  }
+
+  .lk-app-container{
+     max-width: 100%;
+  }
+
+  .lk-hotel-container{
+    width: 75%;
+    max-width: 75%;
   }
 
   .lk-nav-wrapper {
@@ -285,6 +395,63 @@ body {
   .lk-signup-wrapper {
     width: 50%;
   }
+
+  /* spinning icon */
+  .lk-loading{
+   width: 20%;
+   height: auto;
+ }
+
+ .lk-room-detail{
+  flex-direction: row;
+}
+
+.lk-reserve-room-details-wrapper{
+ width: 30%;
+ height: 100%;
+ padding-top: 10%;
+}
+
+.lk-reserve-room-details{
+ height: 100%;
+}
+
+ .lk-reserve-room-img-wrapper{
+  margin-top: 1%;
+  width: 70%;
+  padding: 4%;
+}
+
+.lk-color-wheel{
+ 
+ width: 100%;
+ margin: 20% 0rem;
+}
+
+.lk-color-wheel img{
+ width: 40%;
+ display: flex;
+}
+
+.lk-btn-reserve-room-wrapper{
+ width: 100%;
+ justify-content: center;
+ margin-top: 5%;
+}
+
+
+.lk-btn-reserve-room-wrapper a{
+
+ justify-content: space-evenly;
+}
+/* .lk-reserve-room-details{
+ padding-top: 3rem;
+} */
+
+
+
+
+
 }
 
 @media screen and (min-width: 1024px) {
