@@ -32,12 +32,12 @@ const CreateReserve = () => {
           <p>{message}</p>
           <div className="container py-5">
             <div className="row  justify-content-center ">
-              <div className="col-lg-3 col-sm-6 ">
+              <div className="col-lg-3 col-sm-6 lk-data-wrap">
                 <label htmlFor="startDate" className="KAReseterlabel">Start date</label>
 
-                <DatePicker id="startDate" selected={start} className="date" onChange={(date) => setStart(date)} />
+                <DatePicker id="startDate" selected={start} className="date lk-date" onChange={(date) => setStart(date)} />
               </div>
-              <div className="col-lg-3 col-sm-6">
+              <div className="col-lg-3 col-sm-6 lk-data-wrap">
                 <label htmlFor="endDate" className="KAReseterlabel">End date</label>
                 <DatePicker id="endDate" selected={end} className="date" onChange={(date) => setEnd(date)} />
 

@@ -373,6 +373,15 @@ body {
 
 }
 
+.lk-data-wrap{
+  width:100%;
+  margin-top: 1rem;
+}
+
+.lk-date{
+  border: none;
+}
+
 @media screen and (min-width: 768px) {
   .lk-header {
     padding-top: 1rem;
