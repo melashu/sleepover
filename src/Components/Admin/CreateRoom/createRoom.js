@@ -15,7 +15,7 @@ const CreateRoom = () => {
   const [message, setMessage] = useState('');
   const hotels = useSelector(getHotel);
   const dispatch = useDispatch();
-  const user = useSelector((state)=>state.user)
+  const user = useSelector((state) => state.user);
   useEffect(() => {
     dispatch(getHotelThank());
   }, []);
@@ -37,8 +37,8 @@ const CreateRoom = () => {
     data.append('photo', photo[0]);
     try {
       const response = await axios.post(
-        "http://127.0.0.1:3000/api/v1/rooms",
-        data
+        'http://127.0.0.1:3000/api/v1/rooms',
+        data,
       );
       if (response.data.message === 'success') {
         setMessage('Successfuly created!');

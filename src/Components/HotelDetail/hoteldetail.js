@@ -77,7 +77,7 @@ const Hoteldetail = () => {
                 </strong>
                 {' '}
               </p>
-              <Link to="detail" state={room}  className="btn btn-primary">
+              <Link to="detail" state={room} className="btn btn-primary">
                 See Detail
               </Link>
             </div>

@@ -11,7 +11,6 @@ import Hotel from './Components/Hotel/hotel';
 import Signup from './Components/signup/signup';
 import Login from './Components/login/Login';
 
-
 import RoomDetail from './Components/RoomDetail/roomdetail';
 import Hoteldetail from './Components/HotelDetail/hoteldetail';
 import CreateReserve from './Components/CreateReserve/createreserve';
@@ -20,13 +19,10 @@ import Myreservation from './Components/Myreservation/myreservation';
 // import { authenticated } from './Redux/users/users';
 // import RouteConfig from './Components/Admin/RouteAdmin';
 
-
-
 // import { authenticated } from './Redux/users/users';
 // import RouteConfig from './Components/Admin/RouteAdmin';
 
 function UsersPage() {
-
   return (
     <div>
       <div className="lk-app-container lk-flex ">
@@ -40,11 +36,11 @@ function UsersPage() {
 
               <Route
                 path="/my-reservation"
-                element={
+                element={(
                   <Protected>
                     <Myreservation />
                   </Protected>
-                }
+                )}
               />
               <Route path="/hotel/:id">
                 <Route index element={<Hoteldetail />} />
@@ -52,11 +48,11 @@ function UsersPage() {
                   <Route index element={<RoomDetail />} />
                   <Route
                     path="create-reserve"
-                    element={
+                    element={(
                       <Protected>
                         <CreateReserve />
                       </Protected>
-                    }
+                    )}
                   />
                 </Route>
               </Route>

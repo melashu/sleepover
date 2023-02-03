@@ -22,16 +22,18 @@ function AdminPage() {
   // eg 127.168.1.34/admin/login
   return (
     <div>
-         <Routes>
-            <Route path="/" element={(
-                <Protected>
-                  <RouteAdmin />
-                </Protected>
+      <Routes>
+        <Route
+          path="/"
+          element={(
+            <Protected>
+              <RouteAdmin />
+            </Protected>
               )}
-            />
-     </Routes>
+        />
+      </Routes>
 
-      </div>
+    </div>
   );
 }
 

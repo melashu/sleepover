@@ -1,14 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 // import authSlice from './authentification/login';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer, persistStore } from 'redux-persist';
 import userReduce from './users/users';
 import hotelReducer from './hotelSlices';
 import reserveReducer from './reservationSlices';
 import roomReducer from './roomSlices';
 import allreservedReducer from './Admin/reserved';
 import historyreservedReducer from './Admin/historyReserved';
-import storage from 'redux-persist/lib/storage';
-import { persistReducer, persistStore } from 'redux-persist';
+
 const rootReducer = combineReducers({
   user: userReduce,
   hotel: hotelReducer,
@@ -20,13 +21,13 @@ const rootReducer = combineReducers({
 });
 const storeConfig = {
   key: 'sleepover',
-  storage
-}
+  storage,
+};
 
 const persistedReducer = persistReducer(storeConfig, rootReducer);
 const store = configureStore({
-  reducer: persistedReducer
+  reducer: persistedReducer,
 });
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);
 export default store;
