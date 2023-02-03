@@ -81,6 +81,8 @@ const Hotel = () => {
              
               {hotel.name}
               </h4>
+              <p className="card-text detail">Country <strong>{hotel.country}</strong></p>
+              <p className="card-text detail">City <strong>{hotel.city}</strong></p>
               <p className="card-text detail">{hotel.detail}</p>
               <p className="card-text">
     
