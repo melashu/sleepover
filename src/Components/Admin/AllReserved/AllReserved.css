@@ -1,0 +1,12 @@
+.AllReserved {
+  color: #fff;
+}
+
+img.ABRoomImage {
+  width: 50%;
+}
+
+.ABTotalTitle,
+.ABLoading {
+  color: teal;
+}
