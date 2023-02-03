@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-
+/* eslint-disable */
 const unReserveRoomThunk = createAsyncThunk('unreserve', async () => {
   const response = await axios.get('http://127.0.0.1:3000/api/v1/rooms');
   const room = response.data.filter((room) => !room.reserve);

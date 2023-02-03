@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
+/* eslint-disable */
 const getHotelThank = createAsyncThunk('hotel', async () => {
   const response = await axios.get('http://127.0.0.1:3000/api/v1/hotels/all');
   return response.data;

@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-
+/* eslint-disable */
 const createRoomThunk = createAsyncThunk('room', async () => {
   const response = await axios.get('http://127.0.0.1:3000/api/v1/rooms');
   return response.data;

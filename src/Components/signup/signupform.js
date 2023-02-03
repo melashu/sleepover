@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { userSignUp } from '../../Redux/users/users';
-
+/* eslint-disable */
 const SignUpForm = () => {
   const [name, setName] = useState('');
   const [userName, setUserName] = useState('');

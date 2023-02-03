@@ -12,7 +12,6 @@ const Login = () => {
   const user = useSelector(
     (state) => state.user,
   ); // Add this statement
-  // console.log(user)
   let myUser;
 
   useEffect(() => {
@@ -32,25 +31,6 @@ const Login = () => {
     } else if (password.length === 0) {
       setMessage('Password should not be blank');
     } else {
-      // fetch(
-      //   `http://localhost:3001/auth/login?email=${email}&password=${password}`,
-      //   {
-      //     method: 'post',
-      //     headers: {
-      //       'Content-Type': 'application/json',
-      //       Accept: 'application/json',
-      //     },
-      //   },
-      // )
-      //   .then((res) => res.json())
-      //   .then((res) => {
-      //     if (!res.error) {
-      //       dispatch(loginUser({ email, password }));
-      //       setSuccess(true);
-      //     } else {
-      //       setMessage('Invalid email or password');
-      //     }
-      //   });
       dispatch(loginUser({
         email,
         password,
@@ -60,7 +40,6 @@ const Login = () => {
         history('/admin');
       } else if (user.isAuthenticated && user.user.role === 'user') {
         history('/');
-        // <Navigate to="/my-reservation" replace />;
       }
     }
   };

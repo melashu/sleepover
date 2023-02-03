@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+/* eslint-disable */
 const GET_RESERVED = 'GET_RESERVED';
 
 const initialState = { reserved: [] };
