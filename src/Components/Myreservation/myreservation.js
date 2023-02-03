@@ -1,13 +1,10 @@
-// import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 
 const Myreservation = () => {
   const [reserved, setReserved] = useState([]);
-  //   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
-  console.log(reserved);
   const getMyreservation = async () => {
     const response = await axios.get(
       `http://127.0.0.1:3000/api/v1/reservations/my/${user.user.id}`,
@@ -35,7 +32,6 @@ const Myreservation = () => {
         <div className="lk-myreservation lk-flex">
           {reserved.map((item) => (
             <div className=" " key={item.id}>
-
               <img
                 className=" ABRoomImage"
                 src={item.room.photo.url}
@@ -43,7 +39,6 @@ const Myreservation = () => {
               />
 
               <div className="me-info">
-
                 <p>
                   Your name:
                   {item.user.name}
@@ -62,6 +57,7 @@ const Myreservation = () => {
                   $
                 </p>
                 <p className="p-1">
+
                   Reserved from:
                   {item.start_date}
                   {' '}

@@ -38,6 +38,7 @@ const usersSlice = createSlice({
     logout: (state) => {
       state.token = null;
       localStorage.clear();
+      window.location.reload();
     },
 
   },

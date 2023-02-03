@@ -10,7 +10,6 @@ const RoomDetail = () => {
   return (
     <div className="lk-hotel-container  lk-flex">
       <div className="lk-room-detail lk-flex">
-
         <div className="lk-reserve-room-img-wrapper lk-c-flex">
           <img src={state.photo.url} alt={state.room_no} />
           {/* <img src={logo} alt={state.room_no} />  */}

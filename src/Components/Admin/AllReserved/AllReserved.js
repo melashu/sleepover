@@ -14,7 +14,7 @@ const AllReserved = () => {
   }, [dispatch, reserved.length]);
   if (reserved.length === 0) {
     return (
-      <div className="container bg-dark d-flex justify-content-center my-5 py-5">
+      <div className="container bg-light d-flex justify-content-center my-5 py-5">
         <div className="row">
           <h1 className="col-12 ABLoading"> Reserved Room Loading ...</h1>
         </div>
@@ -23,7 +23,7 @@ const AllReserved = () => {
   }
 
   return (
-    <div className="container AllReserved bg-dark p-5">
+    <div className="container AllReserved bg-light p-5">
       <h1 className="text-center py-5 ABTotalTitle">All Reserved Room</h1>
       <div className="row my-5">
         <div className="col-12 row">
