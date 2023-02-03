@@ -47,13 +47,30 @@ function UsersPage() {
             <Route path="detail">
               <Route index element={<RoomDetail />} />
               <Route
+
                 path="create-reserve"
+
                 element={(
                   <Protected>
                     <CreateReserve />
                   </Protected>
-                    )}
+
+                )}
               />
+              <Route path="/hotel/:id">
+                <Route index element={<Hoteldetail />} />
+                <Route path="detail">
+                  <Route index element={<RoomDetail />} />
+                  <Route
+                    path="create-reserve"
+                    element={(
+                      <Protected>
+                        <CreateReserve />
+                      </Protected>
+                    )}
+                  />
+                </Route>
+              </Route>
             </Route>
           </Route>
         </Route>
