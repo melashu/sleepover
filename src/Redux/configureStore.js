@@ -7,7 +7,8 @@ import reserveReducer from './reservationSlices';
 import roomReducer from './roomSlices';
 import allreservedReducer from './Admin/reserved';
 import historyreservedReducer from './Admin/historyReserved';
-
+import storage from 'redux-persist/lib/storage';
+import { persistReducer, persistStore } from 'redux-persist';
 const rootReducer = combineReducers({
   user: userReduce,
   hotel: hotelReducer,
@@ -17,9 +18,15 @@ const rootReducer = combineReducers({
   historyreserved: historyreservedReducer,
   // Add your reducers here
 });
+const storeConfig = {
+  key: 'sleepover',
+  storage
+}
 
+const persistedReducer = persistReducer(storeConfig, rootReducer);
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: persistedReducer
 });
 
+export const persistor = persistStore(store)
 export default store;
