@@ -26,36 +26,38 @@ const CreateReserve = () => {
   };
 
   return (
-    <div className="container bg-light justify-content-center my-5 py-5 shadow">
-      <form className="row justify-content-center">
-        <p>{message}</p>
-        <div className="container py-5">
-          <div className="row  justify-content-center">
-            <div className="col-lg-3 col-sm-6">
-              <label htmlFor="startDate" className="KAReseterlabel">Start date</label>
+    <div className="lk-hotel-container  lk-flex">
+      <div className="lk-create-reservation lk-c-flex ">
+        <form className="row  lk-create-reservation-form lk-flex">
+          <p>{message}</p>
+          <div className="container py-5">
+            <div className="row  justify-content-center ">
+              <div className="col-lg-3 col-sm-6 ">
+                <label htmlFor="startDate" className="KAReseterlabel">Start date</label>
 
-              <DatePicker id="startDate" selected={start} className="date" onChange={(date) => setStart(date)} />
-            </div>
-            <div className="col-lg-3 col-sm-6">
-              <label htmlFor="endDate" className="KAReseterlabel">End date</label>
-              <DatePicker id="endDate" selected={end} className="date" onChange={(date) => setEnd(date)} />
+                <DatePicker id="startDate" selected={start} className="date" onChange={(date) => setStart(date)} />
+              </div>
+              <div className="col-lg-3 col-sm-6">
+                <label htmlFor="endDate" className="KAReseterlabel">End date</label>
+                <DatePicker id="endDate" selected={end} className="date" onChange={(date) => setEnd(date)} />
 
+              </div>
             </div>
+
           </div>
+          <button
+            type="button"
+            className="lk-default-btn"
+            onClick={(e) => {
+              create();
+            }}
+          >
+            {' '}
+            Reserve Now
+          </button>
 
-        </div>
-        <button
-          type="button"
-          className="btn btn-outline-primary me-btn me-btn-create m-4"
-          onClick={(e) => {
-            create();
-          }}
-        >
-          {' '}
-          Create
-        </button>
-
-      </form>
+        </form>
+     </div>
     </div>
   );
 };

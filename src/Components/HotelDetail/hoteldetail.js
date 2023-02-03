@@ -59,7 +59,8 @@ const Hoteldetail = () => {
           <div className="card lk-flex" key={room.id}>
             <img
             // Todo: remember to change the logo
-              src={logo}
+              // src={logo}
+              src={room.photo.url}
               className="card-img-top"
               alt={room.room_no}
             />

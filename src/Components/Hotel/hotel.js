@@ -71,8 +71,8 @@ const Hotel = () => {
         {hotels.map((hotel) => (
           <div className="card lk-flex" key={hotel.id}>
             <img
-              // Todo: remember to change the logo
-              src={logo}  
+    
+              src={hotel.image.url}  
               className="card-img-top"
               alt={hotel.name}
             />
@@ -81,8 +81,9 @@ const Hotel = () => {
              
               {hotel.name}
               </h4>
-              <p className="card-text detail">Country <strong>{hotel.country}</strong></p>
-              <p className="card-text detail">City <strong>{hotel.city}</strong></p>
+              <p className="card-text detail lk-card-p">Country <strong>{hotel.country}</strong></p>
+          
+              <p className="card-text detail lk-card-p">City <strong>{hotel.city}</strong></p>
               <p className="card-text detail">{hotel.detail}</p>
               <p className="card-text">
     

@@ -20,7 +20,7 @@ const Myreservation = () => {
   }, []);
   if (reserved.length === 0) {
     return (
-      <div className="container">
+      <div className="lk-hotel-container  lk-flex">
         <div className="row">
           <h1 className="col-12 ABLoading"> Loading ...</h1>
         </div>

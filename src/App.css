@@ -339,6 +339,11 @@ body {
  margin-top: 1rem;
 }
 
+.lk-card-p{
+  padding: 0%;
+  margin: -10px;
+}
+
 .lk-btn-reserve-room-wrapper a{
  display: flex;
  align-items: center;
@@ -349,6 +354,22 @@ body {
  padding: 0.7rem;
  font-size: 1.6rem;
  border-radius: 30rem;
+
+}
+
+
+.lk-create-reservation{
+  justify-content: center;
+  align-items: center;
+
+}
+
+.lk-create-reservation-form {
+ justify-content: center;
+ align-items: center;
+ padding: 1rem;
+ width: 90%;
+ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 }
 
@@ -449,8 +470,20 @@ body {
 } */
 
 
+.lk-create-reservation-form {
+ width: 70%;
 
+}
 
+.lk-default-btn{
+padding: 0.7rem;
+font-size: 1.6rem;
+border-radius: 30rem;
+background-color:var(--green-color); 
+color: white;
+width: auto;
+padding: 0.5rem 2rem;
+}
 
 }
 
