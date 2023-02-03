@@ -52,14 +52,14 @@ const Login = () => {
           <input
             type="email"
             placeholder="email"
-            className="p-2 border rounded-lg input"
+            className="p-2 border input"
             onChange={(e) => setEmail(e.target.value)}
           />
           <br />
           <input
             type="password"
             placeholder="password"
-            className="p-2 border rounded-lg input"
+            className="p-2 border input"
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
