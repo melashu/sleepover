@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './footer.scss';
 
 const Footer = () => (
-  <footer className="fluid-container bg-dark text-white p-4">
+  <footer className="fluid-container bg-light text-dark p-4">
     <div className="row col-12">
       <div className="col-4" />
       <div className="col-4 text-center">

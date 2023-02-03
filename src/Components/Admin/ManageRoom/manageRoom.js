@@ -30,7 +30,7 @@ const ManageRoom = () => {
 
   const deleteRoom = async (id) => {
     const response = await axios.delete(
-      `http://127.0.0.1:3000/api/v1/rooms/${id}`,
+      `https://sleepoverapi.onrender.com/api/v1/rooms/${id}`,
     );
     if (response.data.message === 'success') {
       dispatch(removeRoom(id));
@@ -63,35 +63,37 @@ const ManageRoom = () => {
         {filteredRoom.map((room) => (
           <div className="me-room" key={room.id}>
             <img src={room.photo.url} alt={room.hotel.name} />
-            <p>
-              Hotel Name:
-              {room.hotel.name}
-            </p>
-            <p>
-              City:
-              {room.hotel.city}
-            </p>
-            <p>
-              Room No:
-              {room.room_no}
-            </p>
-            <p>
-              Number of Bed:
-              {room.number_of_bed}
-            </p>
-            <p>
-              Country:
-              {room.hotel.country}
-            </p>
-            <button
-              type="button"
-              className="btn btn-outline-danger me-btn"
-              onClick={() => {
-                deleteRoom(room.id);
-              }}
-            >
-              Delete
-            </button>
+            <div>
+              <p>
+                Hotel Name:
+                {room.hotel.name}
+              </p>
+              <p>
+                City:
+                {room.hotel.city}
+              </p>
+              <p>
+                Room No:
+                {room.room_no}
+              </p>
+              <p>
+                Number of Bed:
+                {room.number_of_bed}
+              </p>
+              <p>
+                Country:
+                {room.hotel.country}
+              </p>
+              <button
+                type="button"
+                className="btn btn-outline-danger me-btn"
+                onClick={() => {
+                  deleteRoom(room.id);
+                }}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         ))}
       </div>

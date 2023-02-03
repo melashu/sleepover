@@ -5,6 +5,7 @@ import Widget from '../widget/widget';
 import './dashboard.scss';
 import { getHotelThank } from '../../../Redux/hotelSlices';
 import { reservedRoomThunk, unReserveRoomThunk } from '../../../Redux/reservationSlices';
+import image from '../../../assets/log.jpg';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -16,10 +17,15 @@ const Dashboard = () => {
   }, [dispatch]);
 
   return (
-    <div className="me-dashboard">
-      <Widget type="hotel" />
-      <Widget type="reserved" />
-      <Widget type="unreserved" />
+    <div>
+      <div className="me-dashboard">
+        <Widget type="hotel" />
+        <Widget type="reserved" />
+        <Widget type="unreserved" />
+      </div>
+      <div className="image">
+        <img src={image} alt="sleepover" />
+      </div>
     </div>
   );
 };

@@ -58,32 +58,37 @@ const ManageHotel = () => {
       </div>
 
       {filteredHotels.map((hotel) => (
-        <div className="me-room" key={hotel.id}>
-          <img src={hotel.image.url} alt={hotel.name} />
-          <p>
-            Hotel Name:
-            {hotel.name}
-          </p>
-          <p>
-            City:
-            {hotel.city}
-          </p>
-          <p>
-            Country:
-            {hotel.country}
-          </p>
-          <button
-            type="button"
-            className="btn btn-outline-danger me-btn"
-            onClick={() => {
-              deleteHotel(hotel.id);
-            }}
-          >
-            Delete
-          </button>
+        <div className="me-hotel" key={hotel.id}>
+          <img
+            src={hotel.image.url}
+            className="me-hotel-image"
+            alt={hotel.name}
+          />
+          <div>
+            <p>
+              Hotel Name:
+              {hotel.name}
+            </p>
+            <p>
+              City:
+              {hotel.city}
+            </p>
+            <p>
+              Country:
+              {hotel.country}
+            </p>
+            <button
+              type="button"
+              className="btn btn-outline-danger me-btn"
+              onClick={() => {
+                deleteHotel(hotel.id);
+              }}
+            >
+              Delete
+            </button>
+          </div>
         </div>
       ))}
-
     </div>
   );
 };

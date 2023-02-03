@@ -37,7 +37,7 @@ const Widget = ({ type }) => {
       card = {
         title: 'Reserved Rooms',
         counter: reserved.length,
-        link: '/reserved-room',
+        link: '/admin/reserved-room',
         icon: (
           <BedroomParent
             className="icon"
@@ -54,7 +54,7 @@ const Widget = ({ type }) => {
       card = {
         title: 'Unreserved Room',
         counter: unreserved.length,
-        link: '/reserved-room',
+        link: '/admin/manageRoom',
         icon: (
           <HomeOutlined
             className="icon"

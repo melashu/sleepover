@@ -6,7 +6,7 @@ const RoomDetail = () => {
   const { state } = useLocation();
   return (
     <div className="me-container d-flex bg-light">
-      <img src={image} alt={state.room_no} />
+      <img src={state.photo.url} alt={state.room_no} />
       <div className="m-4 flex-4">
         <h3>
           Room Number:

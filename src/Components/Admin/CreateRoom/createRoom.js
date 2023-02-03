@@ -15,7 +15,7 @@ const CreateRoom = () => {
   const [message, setMessage] = useState('');
   const hotels = useSelector(getHotel);
   const dispatch = useDispatch();
-
+  const user = useSelector((state) => state.user);
   useEffect(() => {
     dispatch(getHotelThank());
   }, []);
@@ -32,7 +32,7 @@ const CreateRoom = () => {
     data.append('room_no', roomNo);
     data.append('number_of_bed', numberofBed);
     data.append('prices', prices);
-    data.append('user_id', 1);
+    data.append('user_id', user.user.id);
     data.append('hotel_id', hotel);
     data.append('photo', photo[0]);
     try {

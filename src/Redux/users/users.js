@@ -13,7 +13,6 @@ const initialState = {
   error: '',
   user: '',
   msg: '',
-
 };
 
 export const userSignUp = api.signup;
@@ -71,17 +70,16 @@ const usersSlice = createSlice({
 
     builder.addCase(loginUser.fulfilled, (state,
       { payload }) => {
-      // state.Loading = false;
+      // console.log("Payload", payload)
       if (payload.error === 'unauthorized') {
         // state.error = error;
-        console.log('Error', payload.error);
         return {
           ...state,
           error: payload.error,
           Loading: false,
           msg: '',
           isAuthenticated: false,
-          user: '',
+          user: {},
           token: '',
         };
       }

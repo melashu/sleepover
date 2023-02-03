@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './createHotel.scss';
+import { useSelector } from 'react-redux';
 
 const CreateHotel = () => {
   const [name, setName] = useState('');
@@ -11,6 +12,7 @@ const CreateHotel = () => {
   const [phone, setPhone] = useState('');
   const [detail, setDetail] = useState('');
   const [message, setMessage] = useState('');
+  const currentUser = useSelector((state) => state.user);
 
   const create = async (e) => {
     e.preventDefault();
@@ -20,7 +22,7 @@ const CreateHotel = () => {
     data.append('country', country);
     data.append('city', city);
     data.append('phone', phone);
-    data.append('user_id', 1);
+    data.append('user_id', currentUser.user.id);
     data.append('detail', detail);
     data.append('image', image[0]);
     try {

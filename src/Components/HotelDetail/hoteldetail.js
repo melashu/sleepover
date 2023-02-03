@@ -54,7 +54,7 @@ const Hoteldetail = () => {
             <img
               src={room.photo.url}
               className="card-img-top"
-              alt={room.hotel.name}
+              alt={room.room_no}
             />
             <div className="card-body text-center">
               <h2 className="me-card-title">
@@ -77,7 +77,7 @@ const Hoteldetail = () => {
                 </strong>
                 {' '}
               </p>
-              <Link to="detail" className="btn btn-primary">
+              <Link to="detail" state={room} className="btn btn-primary">
                 See Detail
               </Link>
             </div>

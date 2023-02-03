@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../../Redux/users/users'; // Change the url
 
@@ -13,6 +13,7 @@ const Login = () => {
   const user = useSelector(
     (state) => state.user,
   ); // Add this statement
+  // console.log(user)
   let myUser;
 
   useEffect(() => {
@@ -56,8 +57,11 @@ const Login = () => {
         password,
       }));
 
-      if (myUser.isAuthenticated) {
+      if (user.isAuthenticated && user.user.role === 'admin') {
+        history('/admin');
+      } else if (user.isAuthenticated && user.user.role === 'user') {
         history('/');
+        // <Navigate to="/my-reservation" replace />;
       }
     }
   };
