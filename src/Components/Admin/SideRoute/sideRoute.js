@@ -39,7 +39,6 @@ export default function sideRoute() {
           <Link to="/admin/reserved-room">Reservations</Link>
         </li>
         <li className="offcanvas-body ABTitleNav mb-2 d-flex justify-content-start align-items-center gap-3">
-
           <CircleOutlined style={{ backgroundColor: '#fff' }} />
           <Link to="/admin/history-reserved-room">History Reservations</Link>
         </li>

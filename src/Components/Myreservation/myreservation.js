@@ -17,7 +17,7 @@ const Myreservation = () => {
   }, []);
   if (reserved.length === 0) {
     return (
-      <div className="container">
+      <div className="lk-hotel-container  lk-flex">
         <div className="row">
           <h1 className="col-12 ABLoading"> Loading ...</h1>
         </div>
@@ -26,17 +26,18 @@ const Myreservation = () => {
   }
   // console.log(reserved);
   return (
-    <div className="container AllReserved  p-5">
+    <div className="lk-hotel-container">
       <h1 className="text-center py-5 ABTotalTitle">Your reservations</h1>
       <div className="my-5">
-        <div className="">
+        <div className="lk-myreservation lk-flex">
           {reserved.map((item) => (
-            <div className="row" key={item.id}>
+            <div className=" " key={item.id}>
               <img
-                className="col-6 ABRoomImage"
+                className=" ABRoomImage"
                 src={item.room.photo.url}
                 alt="Room"
               />
+
               <div className="me-info">
                 <p>
                   Your name:
@@ -55,7 +56,8 @@ const Myreservation = () => {
                   {item.room.prices}
                   $
                 </p>
-                <p className="p-5">
+                <p className="p-1">
+
                   Reserved from:
                   {item.start_date}
                   {' '}
@@ -63,6 +65,7 @@ const Myreservation = () => {
                   {item.end_date}
                 </p>
               </div>
+
             </div>
           ))}
         </div>

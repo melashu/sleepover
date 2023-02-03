@@ -9,11 +9,10 @@
 .card {
   margin: 0.8rem;
   padding: 0.8rem;
-  border: none
-
+  border: none;
 }
 
-.carousel-container{
+.carousel-container {
   display: flex;
   gap: 2rem;
   padding: 2rem;
@@ -26,14 +25,12 @@
   font-size: 2rem;
 }
 
-.loading-wrapper{
+.loading-wrapper {
   // height: 50%;
   display: flex;
   justify-content: center;
   align-content: center;
 }
-
-
 
 .detail {
   padding: 1rem;
@@ -50,17 +47,16 @@
   font-weight: 900;
 }
 
-
-
-.card-img-top{
- height: 50%;
- 
+.card-img-top {
+  height: 50%;
 }
 
-.lk-item{
- max-height: 50%;
- margin: 1.5rem;
- box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+.lk-item {
+  max-height: 50%;
+  margin: 1.5rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+}
+
 
 .spinner {
   position: absolute;
@@ -70,8 +66,7 @@
 
 }
 
-.lk-item:hover{
- 
- transform: scale(1.02);
- transition: all 0.5s;
+.lk-item:hover {
+  transform: scale(1.02);
+  transition: all 0.5s;
 }

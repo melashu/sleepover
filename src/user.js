@@ -47,9 +47,7 @@ function UsersPage() {
             <Route path="detail">
               <Route index element={<RoomDetail />} />
               <Route
-
                 path="create-reserve"
-
                 element={(
                   <Protected>
                     <CreateReserve />
