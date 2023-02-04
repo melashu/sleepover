@@ -14,7 +14,6 @@ import Myreservation from './Components/Myreservation/myreservation';
 import RouteAdmin from './Components/Admin/RouteAdmin';
 
 function AdminPage() {
-
   // eg 127.168.1.34/admin/login
   return (
     <div>

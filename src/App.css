@@ -257,8 +257,7 @@ body {
 
 .login-btn {
   background-color: var(--green-color);
-  padding: .7rem 3rem;
-  border-radius: 5px;
+  padding: 0.7rem 3rem;
   margin-right: -43rem;
   border-radius: 20px;
   color: #fff;
