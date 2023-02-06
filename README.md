@@ -137,7 +137,7 @@ Install project dependecies with:
 
 ```
   bundler install
-``
+```
 
 
 ### Usage (In backend)
@@ -159,7 +159,8 @@ To run the project, execute the following command:
 - After running `npm start`, open your browser and enter this address http://localhost:3000/
 - Register as regular user using signup link. 
 - To login as an admin, first run as `rails db:seed`in your backend terminal
-- Then use  
+- Then enter the following  
+
 ```
 Email: admin@gmail.com
 Password: 123456789
