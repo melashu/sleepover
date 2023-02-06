@@ -1,70 +1,212 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
 
-## Available Scripts
+# 📗 Table of Contents
 
-In the project directory, you can run:
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-### `npm start`
+<!-- PROJECT DESCRIPTION -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 Sleep over app  <a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> This is an app that helps you to book an hotel's room from all over the world.
 
-### `npm test`
+## 🛠 Built With <a name="built-with"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tech Stack <a name="tech-stack"></a>
 
-### `npm run build`
+> Here are List of technologies used on this project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+  <summary>Languages</summary>
+  <ul>
+    <li><a href="https://ruby-lang.org/en">Ruby</a></li>
+    <li><a href="https://javascript.com/">JavaScript</a></li>
+    <li><a href="https://html.spec.whatwg.org/multipage/">HTML</a></li>
+    <li><a href="https://www.w3.org/TR/CSS/#css">CSS</a></li>
+  </ul>
+</details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+  <summary>Frameworks</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-### `npm run eject`
+<details>
+<summary>Linters</summary>
+  <ul>
+    <li><a href="https://www.rubocop.org/">Rubocop</a></li>
+    <li><a href="https://www.stylelint.io/">Stylelint</a></li>
+  </ul>
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+<summary>Test library</summary>
+  <ul>
+    <li><a href="https://www.rspec.info/">Rspec</a></li>
+    <li><a href="https://jestjs.io/">Jest</a></li>
+  </ul>
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- Features -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Key Features <a name="key-features"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Book Rooms
+- Admninistration of rooms
+- See a list of Hotel's rooms
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💻 Getting Started <a name="getting-started"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
 
-### Code Splitting
+In order to run this project you need:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Npm
+- Git
+- Broswer to Display
+- IDE to run and edit the code
 
-### Analyzing the Bundle Size
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Clone this repository to your desired folder:
 
-### Making a Progressive Web App
+```
+  git clone https://github.com/melashu/Hotel-room-reservation-front.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+change directory to cloned folder
 
-### Advanced Configuration
+```
+  cd Hotel-room-reservation-front
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Install
 
-### Deployment
+Install project dependecies with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+  npm install
+```
 
-### `npm run build` fails to minify
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To run the project, execute the following command:
+
+```
+  npm start
+```
+
+- After running `npm start`, open your browser and enter this address http://localhost:3000/
+
+- Congratulations! your're running **_Hotel-room-reservation-front_**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Benjamin kisenge**
+
+- GitHub: [@benjamin kisenge](https://github.com/iambenkis)
+- Twitter: [@benjamin kisenge](https://twitter.com/iambenkis)
+- LinkedIn: [benjamin kisenge](https://www.linkedin.com/in/ben-kisenge/)
+
+👤 **Meshu Amare**
+
+- GitHub: [@melashu](https://github.com/melashu)
+- Twitter: [@meshu102](https://twitter.com/meshu102)
+- LinkedIn: [Melashu Amare](https://www.linkedin.com/in/melashu-amare/)
+
+👤 **Abigiya Tadesse**
+
+- GitHub: [@githubhandle](https://github.com/AbigiyaTY)
+- Twitter: [@twitterhandle](https://twitter.com/AbigiyaTY)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/AbigiyaTY)
+
+👤 **Lawrence Addai Kusi**
+ - GitHub: [@Githubhandle](https://github.com/kusiLaw)
+ - Twitter: [@Twitterhandle](https://twitter.com/kusilaw)
+ - Linkedin: [Linkedin](https://www.linkedin.com/in/lawrence-kusi-55a662104)
+
+ 👤 **Mo'athal S. Kachi**
+
+- GitHub: [@githubhandle](https://github.com/Moathal)
+- Twitter: [@twitterhandle](https://twitter.com/mo_athal)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/moathalkachi)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> These features will be added in future updates. ⬇️⬇️
+
+- [ ] **Online payment**
+- [ ] **Chat in the app**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like👍🏽 this project, give the repository a star ⭐
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- I would like to thank the Microverse community
+
+- Specails thanks to [Murat Korkmaz](https://www.behance.net/muratk) on Behance for [designing](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) the template
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

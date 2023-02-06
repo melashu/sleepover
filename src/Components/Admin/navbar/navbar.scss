@@ -1,0 +1,14 @@
+.navbar {
+  padding: 15px;
+  -webkit-box-shadow: 5px 5px 15px 5px #999;
+  box-shadow: 5px 5px 15px 5px #999;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

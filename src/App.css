@@ -1,38 +1,515 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* declare all css variable here */
+:root {
+  --yellow-color: #ffb400;
+  --green-color: #96bf01;
+  --black-color: #252525;
+  --gray-color: #e4e5e9;
+  --dark-gray-color: #e2e3e5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* reset settings for all browser */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 62.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Poppins', sans-serif;
+  min-width: 32rem;
+  font-size: 1.6rem;
+  background-color: var(--gray-color);
+}
+
+#root {
+  position: relative;
+}
+
+.lk-c-flex,
+.lk-flex {
   display: flex;
+}
+
+.lk-c-flex {
   flex-direction: column;
-  align-items: center;
+}
+
+/* header / nav */
+.lk-header {
+  background-color: white;
+  color: black;
+  padding-top: 1rem;
+  height: 100vh;
+  border-right: 1px solid var(--gray-color);
+
+  /* justify-items: space-between; */
+  flex-direction: column;
+}
+
+.lk-menu {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+}
+
+.lk-close {
+  justify-content: flex-end;
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+/* .lk-show{
+ display: none;
+ width: 0px;
+} */
+
+.nav-mobile {
+  position: absolute;
+
+  /* display: flex; */
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.lk-hide {
+  display: none;
+}
+
+.lk-log {
+  margin-bottom: 3rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.lk-log img {
+  height: 8rem;
+  width: 8rem;
+}
+
+.lk-nav-wrapper {
+  height: 100%;
+  padding-left: 2rem;
+  justify-content: space-between;
+  padding-bottom: 10%;
+}
+
+.lk-nav-container {
+  width: 100%;
+  height: 60%;
+  max-height: 85%;
+}
+
+.login {
+  background-color: white;
+}
+
+.input {
+  background-color: #e2e3e5;
+  width: 45%;
+}
+
+.nav-ul {
+  list-style-type: none;
+  padding: 2% 0;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.nav-ul li {
+  /* border: 1px solid green; */
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.lk-btn-reserve-room-wrapper a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--green-color);
+  color: white;
+  width: 70%;
+  padding: 0.7rem;
+  font-size: 1.6rem;
+  border-radius: 30rem;
+}
+
+.nav-ul li a {
+  padding-right: 0.1rem;
+  padding-left: 1rem;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.nav-ul li a:hover {
+  background-color: var(--green-color);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.lk-social {
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.lk-social .fa,
+.lk-copy-right p {
+  color: gray;
+  font-size: 1rem;
+}
+
+.lk-social-wrapper {
+  width: 70%;
+  justify-content: space-between;
+}
+
+/* signup */
+.lk-signup-container {
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  justify-content: center;
+}
+
+.lk-signup-wrapper {
+  height: auto;
+  gap: 0.5rem;
+  width: 70%;
+}
+
+.lk-signUpHeader {
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  font-style: italic;
+  box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+}
+
+.lk-signUpForm {
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  font-style: italic;
+}
+
+.lk-error {
+  color: red;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.lk-input-wrapper {
+  width: 100%;
+}
+
+.lk-input {
+  padding: 0.8rem;
+  width: 100%;
+  background-color: var(--dark-gray-color);
+  color: black;
+  border: none;
+}
+
+.lk-submit-wrapper {
+  align-items: flex-end;
+}
+
+.lk-submit {
+  padding: 0.7rem 2.5rem;
+  border: none;
+  background-color: var(--green-color);
+  color: white;
+  border-radius: 30rem;
+  font-weight: 600;
+}
+
+.login-picture {
+  background-image: url('/src/assets/hotel.jpg');
+}
+
+.login-btn {
+  background-color: var(--green-color);
+  padding: 0.7rem 3rem;
+  margin-right: -43rem;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.need-sign {
+  margin-top: -3rem;
+  margin-left: -32rem;
+}
+
+.login-btn:hover {
+  background-color: var(--green-color);
+}
+
+.bg-red {
+  background-color: rgb(240, 0, 0);
+}
+
+/* h1 {
+  color: var(--yellow-color);
+} */
+.lk-hotel-container {
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  justify-content: center;
+  right: 0;
+}
+
+.lk-hotel-container h2 {
+  font-size: 1.6rem;
+  margin-top: 2%;
+}
+
+.lk-btn-green {
+  color: white;
+  background-color: var(--green-color);
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  border: none;
+}
+
+.lk-btn-green:hover {
+  color: white;
+  background-color: #88ad02;
+}
+
+/* for show cards */
+.lk-loading {
+  width: 35%;
+  height: auto;
+}
+
+.lk-room-detail {
+  flex-direction: column;
+}
+
+.lk-reserve-room-img-wrapper {
+  justify-content: center;
+  align-content: center;
+  margin-top: 10%;
+  width: 100%;
+  padding: 4%;
+}
+
+.lk-reserve-room-details-wrapper {
+  width: 100%;
+  padding-top: 1rem;
+  align-items: center;
+}
+
+.lk-reserve-room-details {
+  width: 90%;
+  height: auto;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.lk-reserve-room-details p {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--dark-gray-color);
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.lk-color-wheel {
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.lk-color-wheel img {
+  width: 35%;
+  height: auto;
+}
+
+.lk-btn-reserve-room-wrapper {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.lk-card-p {
+  padding: 0%;
+  margin: -10px;
+}
+
+.lk-create-reservation {
+  justify-content: center;
+  align-items: center;
+}
+
+.lk-create-reservation-form {
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 90%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+}
+
+.lk-data-wrap {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.lk-date {
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .lk-header {
+    padding-top: 1rem;
+    width: 25%;
+    display: flex;
   }
-  to {
-    transform: rotate(360deg);
+
+  .lk-app-container {
+    max-width: 100%;
+  }
+
+  .lk-hotel-container {
+    width: 75%;
+    max-width: 75%;
+  }
+
+  .lk-nav-wrapper {
+    padding-left: 1rem;
+  }
+
+  .nav-ul li {
+    font-size: 1em;
+  }
+
+  .lk-signup-container {
+    width: 75%;
+  }
+
+  .lk-close {
+    display: none;
+  }
+
+  .lk-menu {
+    display: none;
+  }
+
+  .nav-mobile {
+    position: relative;
+  }
+
+  .lk-signup-wrapper {
+    width: 50%;
+  }
+
+  /* spinning icon */
+  .lk-loading {
+    width: 20%;
+    height: auto;
+  }
+
+  .lk-room-detail {
+    flex-direction: row;
+  }
+
+  .lk-reserve-room-details-wrapper {
+    width: 30%;
+    height: 100%;
+    padding-top: 10%;
+  }
+
+  .lk-reserve-room-details {
+    height: 100%;
+  }
+
+  .lk-reserve-room-img-wrapper {
+    margin-top: 1%;
+    width: 70%;
+    padding: 4%;
+  }
+
+  .lk-color-wheel {
+    width: 100%;
+    margin: 20% 0;
+  }
+
+  .lk-color-wheel img {
+    width: 40%;
+    display: flex;
+  }
+
+  .lk-btn-reserve-room-wrapper {
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+  .lk-btn-reserve-room-wrapper a {
+    justify-content: space-evenly;
+  }
+
+  /* .lk-reserve-room-details{
+ padding-top: 3rem;
+} */
+
+  .lk-create-reservation-form {
+    width: 70%;
+  }
+
+  .lk-default-btn {
+    font-size: 1.6rem;
+    border-radius: 30rem;
+    background-color: var(--green-color);
+    color: white;
+    width: auto;
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .lk-header {
+    padding-top: 1rem;
+    width: 20%;
+  }
+
+  .lk-signup-container {
+    width: 80%;
+  }
+
+  .lk-close {
+    display: none;
   }
 }

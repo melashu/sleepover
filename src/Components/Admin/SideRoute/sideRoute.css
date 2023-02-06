@@ -1,0 +1,48 @@
+.me-side-bar {
+  overflow-y: scroll;
+  flex: 2 !important;
+  padding: 10px;
+}
+
+.ABHoverGreen h1:hover {
+  color: #96bf01;
+}
+
+.ABTitleNav a {
+  text-decoration: none;
+  color: #96bf01;
+  font-size: 24px;
+}
+
+.ABTitleNav a:hover {
+  border: 1px solid #96bf01;
+  margin: 5px;
+  color: #fff;
+  background-color: #96bf01;
+  width: 100%;
+}
+
+.me-admin-contrainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.me-main {
+  flex: 6;
+  padding: 5px;
+  margin: 5px;
+  max-width: 80%;
+}
+
+.me-admin-logo {
+  border-bottom: 5px solid #1c6ea4;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+.me-admin-logo img {
+  width: 150px;
+  height: 150px;
+}

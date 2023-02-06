@@ -1,0 +1,47 @@
+.add-new-hotel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 10px;
+
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    color: teal;
+  }
+
+  .new-hotel {
+    padding: 10px;
+    border: 1px teal solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: teal;
+
+    &:hover {
+      color: #fff;
+      background-color: teal;
+    }
+  }
+}
+
+.css-yrdy0g-MuiDataGrid-columnHeaderRow {
+  background-color: aqua;
+  width: 100%;
+}
+
+.me-hotel-image {
+  width: 350px;
+  height: 350px;
+}
+
+.me-hotel {
+  display: flex;
+  margin: 10px;
+  padding: 8px;
+  gap: 32px;
+  border-bottom: 5px solid #1c6ea4;
+  border-radius: 10px;
+}
