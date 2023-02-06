@@ -99,7 +99,7 @@ In order to run this project you need:
 
 ### Setup
 
-Clone this repository to your desired folder:
+Clone this repository to your desired folder for frontend:
 
 ```
   git clone https://github.com/melashu/Hotel-room-reservation-front.git
@@ -111,7 +111,19 @@ change directory to cloned folder
   cd Hotel-room-reservation-front
 ```
 
-### Install
+Clone this repository to your desired folder for backend:
+
+```
+  git clone https://github.com/melashu/hotel-room-reservation.git
+```
+
+change directory to cloned folder
+
+```
+  cd hotel-room-reservation
+```
+
+### Install (In your frontend project terminal)
 
 Install project dependecies with:
 
@@ -119,7 +131,24 @@ Install project dependecies with:
   npm install
 ```
 
-### Usage
+### Install (In your backend project terminal)
+
+Install project dependecies with:
+
+```
+  bundler install
+``
+
+
+### Usage (In backend)
+
+To run the project, execute the following command:
+
+```
+ rails s
+```
+
+### Usage (In frontend)
 
 To run the project, execute the following command:
 
@@ -128,6 +157,14 @@ To run the project, execute the following command:
 ```
 
 - After running `npm start`, open your browser and enter this address http://localhost:3000/
+- Register as regular user using signup link. 
+- To login as an admin, first run as `rails db:seed`in your backend terminal
+- Then use  
+```
+Email: admin@gmail.com
+Password: 123456789
+```
+
 
 - Congratulations! your're running **_Hotel-room-reservation-front_**
 
