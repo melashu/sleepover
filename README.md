@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS ... -->
 
 # 📗 Table of Contents
 
